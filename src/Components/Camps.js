@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import CampPreview from './CampPreview'
 
 const Camps = ({ campData, onClickCamp }) => {
-    console.log(campData)
+  
     const campList = campData.map(camp => {
         let shortName = camp.name.substring(0, camp.name.indexOf(':'));
         if (shortName === '') {shortName= camp.name }

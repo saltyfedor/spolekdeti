@@ -10,16 +10,13 @@ import apiAdress from './Components/Variables'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import './index.css';
 
 const App = () => {
   
-  const [campData, updateCampData] = useState()
-  const [currentCamp, updateCurrentCamp] = useState()
-  const [route, updateRoute] = useState('home')
+  const [campData, updateCampData] = useState()   
 
   const fetchCamps = () => {
     fetch(`${apiAdress}camps`, {
@@ -33,11 +30,7 @@ const App = () => {
 
   useEffect(fetchCamps, [])
 
-  const onClickCamp = (campId) => {
-    const current = campData.filter(camp => camp.id === campId)    
-    updateCurrentCamp(current[0])
-    updateRoute('camp')    
-  }
+  
 
   return (
     <div className="App">
@@ -47,7 +40,7 @@ const App = () => {
           <Switch>
           <Route exact path="/">
               <TitleSection />
-              {campData ? <Camps campData={campData} onClickCamp={onClickCamp} /> : null}
+              {campData ? <Camps campData={campData}/> : null}
               <Locale />
           </Route>
           <Route path="/Camp/:id">

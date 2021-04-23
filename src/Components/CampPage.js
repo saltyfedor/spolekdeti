@@ -10,7 +10,7 @@ const CampPage = () => {
     const [currentCamp, updateCurrentCamp] = useState()
     const { id } = useParams();
     const fetchCamp = () => {
-        
+       
         fetch(`${apiAdress}camp/${id}`)
             .then(res => res.json())
             .then(data => {
@@ -22,7 +22,7 @@ const CampPage = () => {
             })
     }
 
-    useEffect(fetchCamp, [])
+    useEffect(fetchCamp, [id])
 
     if (currentCamp) {
         return (
