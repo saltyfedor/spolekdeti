@@ -28,9 +28,7 @@ const App = () => {
       })
   }
 
-  useEffect(fetchCamps, [])
-
-  
+  useEffect(fetchCamps, [])  
 
   return (
     <div className="App">
