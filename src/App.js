@@ -20,10 +20,7 @@ const App = () => {
 
   const fetchCamps = () => {
     fetch(`${apiAdress}camps`, {
-      method: 'GET',
-      headers: {
-        'Access-Control-Allow-Origin': 'https://spolekdeti.cz'
-      }
+      method: 'GET',     
     })
       .then(res => res.json())
       .then(data => {       
