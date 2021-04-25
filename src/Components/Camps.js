@@ -1,22 +1,90 @@
-import React from 'react'
-import CampPreview from './CampPreview'
+import React, { useState, useRef, useLayoutEffect } from 'react'
+import CampRow from './CampRow'
 
-const Camps = ({ campData, onClickCamp }) => {
+
+const Camps = ({ campData }) => {
+    const targetRef = useRef();   
+    const [currentRow, updateCurrentRow] = useState(0)
+    const [contentData, updateContentData] = useState()    
+    let movement_timer = null;
+    const RESET_TIMEOUT = 100;
+
+
+    const changeWidth = () => {       
+        if (targetRef.current) {            
+            generateContentData(targetRef.current.offsetWidth)
+        }
+    }
+
+    useLayoutEffect(() => {
+        changeWidth(); 
+    }, []);    
+
   
-    const campList = campData.map(camp => {
-        let shortName = camp.name.substring(0, camp.name.indexOf(':'));
-        if (shortName === '') {shortName= camp.name }
-        return <CampPreview key={camp.id} camp={camp} onClickCamp={onClickCamp} shortName={ shortName }/>
-    });   
+
+    window.addEventListener('resize', ()=>{
+        clearInterval(movement_timer);
+        movement_timer = setTimeout(changeWidth, RESET_TIMEOUT);
+    });
+  
+
+    const generateContentData = (width) => {
+        const propData = [...campData]
+        const newContentData = [];
+        const totalCampNumber = campData.length
+        const elementsInRow = Math.floor((width - 100) / 280)       
+        const numberOfRows = Math.ceil(totalCampNumber / elementsInRow)
+        
+        let i = 0;
+        let currIndex = 0;
+
+        while (numberOfRows > i) {
+            const newRow = [];
+            let x = 0;           
+
+            while (elementsInRow > x) {
+                
+                newRow.push(propData[currIndex])
+                currIndex++;
+                x++;
+            }
+
+            newContentData.push(newRow)
+            i++;
+        }
+        
+        console.log(newContentData)
+        updateContentData(newContentData)
+
+    }
+    
+    const handleArrowClick = (modifier, rowNumber) => {
+        if (modifier === -1) {
+            if (currentRow !== 0) {
+                updateCurrentRow(currentRow - 1)
+            }
+        }
+        if (modifier === 1) {
+            if (currentRow + 1 < rowNumber) {
+                updateCurrentRow(currentRow + 1)
+            }
+        }
+    }
+    
 
     return (
-        <div className="camp-section-container">
+        
+        <div className="camp-section-container" >          
             <h1 className="camp-section-title">TÁBORY</h1>
             <div className="camp-section">
-                {campList}
+                <div className="camp-preview-wrapper" ref={targetRef}>
+                    {contentData ? <CampRow contentData={contentData} current={currentRow} handleArrowClick={handleArrowClick}/> : null}
+                </div>
             </div>
         </div>
+      
     )
  }
 
 export default Camps
+

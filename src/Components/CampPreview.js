@@ -13,7 +13,7 @@ const CampPreview = ({ camp, shortName }) => {
             <div className="camp-preview-element">
                 <div className="camp-preview-image" style={{backgroundImage: `url(${backgroundImage})`}}></div>          
                 <div className="camp-preview-title-container">
-                    <h3 className="camp-preview-title">{shortName}</h3>            
+                    <h3 className="camp-preview-title">{camp.name}</h3>            
                 </div>
             </div>
         </Link>
