@@ -221,6 +221,7 @@ p{
 
 .locale-paragraph{
   text-align: center;
+  line-height: 2;
 }
 
 .locale-image{
@@ -355,6 +356,10 @@ p{
 
 .hm0{
   margin: 15px 0px 15px 0px;
+}
+
+.hmtext{
+  margin: 0px 20px 0px 20px 
 }
 
 .footer{
