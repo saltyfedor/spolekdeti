@@ -29,6 +29,8 @@ p{
   font-size: 16px;
 }
 
+
+
 .logo-top{
   max-height: 80px;
 }
@@ -39,8 +41,7 @@ p{
   width: 100%;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
-  align-items: center;     
+    align-items: center;     
   padding: 1% 2% 1% 2%;  
   background-color: white;
   border-radius: 0px 0px 10px 10px;
@@ -371,7 +372,7 @@ p{
 
 .footer{
   max-width: 1120px;
-  width: 100%;
+  width: inherit;
   display: flex;
   justify-content: space-between;
   padding: 20px;

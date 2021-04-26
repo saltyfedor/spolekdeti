@@ -10,8 +10,7 @@ const Navbar = () => {
             <Link to={`/`} style={{ textDecoration: 'none' }}>
                 <img src={logo} alt='logo' className="logo-top"></img>
             </Link>            
-            <div className="navbar-links">
-              
+            <div className="navbar-links">                
                 <Link to={`/Kontakt`} style={{ textDecoration: 'none' }} className="nav-link">KONTAKT</Link>
             </div>
         </div>
