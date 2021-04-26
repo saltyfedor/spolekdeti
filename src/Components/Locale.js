@@ -2,6 +2,10 @@ import React from 'react'
 import poolPicture from '../Images/bazen.jpg'
 import homesPicture from '../Images/dsc_0518.jfif'
 import playgroundPicture from '../Images/hriste.jfif'
+import jidelna from '../Images/jidelna.jpg'
+import waterhome from '../Images/dumzavodou.jfif'
+import interior from '../Images/chatkainside.jpg'
+
 import '../index.css'
 
 const Locale = () => {
@@ -25,9 +29,9 @@ const Locale = () => {
                     Českým rájem nabízí množství zajímavých turistických výletů, jak pro pěší, tak pro cyklisty.
                 </p>                             
             <div className="locale-gallery">
-                    <div className="locale-image" style={{ backgroundImage: `url(${poolPicture})`}}></div>
-                    <div className="locale-image" style={{ backgroundImage: `url(${homesPicture})`}}></div>
-                    <div className="locale-image" style={{ backgroundImage: `url(${playgroundPicture})`}}></div>
+                    <div className="locale-image" style={{ backgroundImage: `url(${waterhome})`}}></div>
+                    <div className="locale-image" style={{ backgroundImage: `url(${jidelna})`}}></div>
+                    <div className="locale-image" style={{ backgroundImage: `url(${interior})`}}></div>
             </div>
             </div>
         </div>
