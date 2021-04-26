@@ -35,17 +35,20 @@ const CampPage = () => {
                         </div>
                     </div>
                 </div>
+                <div className="hmtext">
                 {currentCamp.age_restriction ? <div className="age-restriction" dangerouslySetInnerHTML={{ __html: currentCamp.age_restriction }}></div> : null}
                 {currentCamp.description ?
                     <div className="camp-description-container">
                         <h2 className="camp-description">Popis</h2>
                         <div className="camp-description" dangerouslySetInnerHTML={{ __html: currentCamp.description }}></div>
                     </div>
-                    : null}
+                        : null}
+                 </div>
                 <div className="camp-gallery-container">
                     <h1 className="camp-gallery-title">Galerie</h1>
                     <p className="camp-gallery-text">Připravujeme fotografie...</p>
-                </div>
+                    </div>
+               
             </div>
 
         )

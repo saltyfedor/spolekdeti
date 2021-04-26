@@ -20,9 +20,9 @@ const CampRow = ({ contentData, current, handleArrowClick, showNav }) => {
     
     return (
         <div className="camp-row">
-            {showNav? <img className="arrow-img" src={leftArrow} alt="left arrow" onClick={() => { handleArrowClick(-1, contentData.length) }}></img> : null}
+            <img className="arrow-img" src={leftArrow} alt="left arrow" onClick={() => { handleArrowClick(-1, contentData.length) }}></img>
             {displayList}
-            {showNav? <img className="arrow-img" src={rightArrow} alt="right arrow" onClick={() => { handleArrowClick(1, contentData.length) }}></img> : null}
+            <img className="arrow-img" src={rightArrow} alt="right arrow" onClick={() => { handleArrowClick(1, contentData.length) }}></img>
         </div>
     )
 

@@ -234,8 +234,7 @@ p{
   box-shadow: 0px 0px 5px darkgray;
   margin: 15px;  
   min-width: 200px;
-  max-width: 350px;
-  flex-grow: 1;
+  max-width: 300px;  
   border: none;
   border-radius: 20px;
   background-size: cover;
@@ -244,6 +243,7 @@ p{
 
 .camp-page-container{
   padding-top: calc(80px + 2% + 4px);
+ 
   display: flex;
   flex-direction: column;  
   justify-content: center;
@@ -268,6 +268,10 @@ p{
   margin-top: auto;
   max-width: 1120px;
   height: 100%;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
   min-height: 450px;
   margin-left: auto;
   margin-right: auto;
