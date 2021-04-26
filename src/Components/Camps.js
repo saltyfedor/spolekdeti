@@ -1,5 +1,6 @@
 import React, { useState, useRef, useLayoutEffect } from 'react'
 import CampRow from './CampRow'
+import CampNav from './CampNav'
 
 
 const Camps = ({ campData }) => {
@@ -37,7 +38,7 @@ const Camps = ({ campData }) => {
             const propData = [...campData]
             const newContentData = [];
             const totalCampNumber = campData.length
-            const elementsInRow = Math.floor((width - 100) / 300)
+            const elementsInRow = Math.floor((width - 100) / 280)
         if (elementsInRow > 1) {
             updateShowNav(true)
             const numberOfRows = Math.ceil(totalCampNumber / elementsInRow)
@@ -86,6 +87,10 @@ const Camps = ({ campData }) => {
         }
     }
     
+    const handleDotClick = (rowNum) => {
+        console.log('dot click')
+        updateCurrentRow(rowNum)
+    }
 
     return (
         
@@ -95,6 +100,7 @@ const Camps = ({ campData }) => {
                 <div className="camp-preview-wrapper" ref={targetRef}>
                     {contentData ? <CampRow contentData={contentData} current={currentRow} handleArrowClick={handleArrowClick} showNav={showNavArrows}/> : null}
                 </div>
+                {contentData ? <CampNav rowNumber={contentData.length} rowCurrent={currentRow} handleDotClick={ handleDotClick}/> : null}
             </div>
         </div>
       

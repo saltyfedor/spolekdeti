@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const NavDot = ({ active }) => {
+const NavDot = ({ active, rowNum, handleClick }) => {
     if (active) {
         return (
             <div className="active-dot"></div>
         )
     } else {
         return (
-            <div className="passive-dot"></div>
+            <div className="passive-dot" onClick={() => { handleClick(rowNum) }}></div>
         )
     }    
 }
