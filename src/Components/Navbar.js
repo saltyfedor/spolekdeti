@@ -11,8 +11,7 @@ const Navbar = () => {
                 <img src={logo} alt='logo' className="logo-top"></img>
             </Link>            
             <div className="navbar-links">
-                <Link to={`/About`} style={{ textDecoration: 'none' }} className="nav-link">O NÁS</Link>                
-                <Link to={`/Galerie`} style={{ textDecoration: 'none' }} className="nav-link">GALERIE</Link>
+              
                 <Link to={`/Kontakt`} style={{ textDecoration: 'none' }} className="nav-link">KONTAKT</Link>
             </div>
         </div>

@@ -243,6 +243,12 @@ p{
   background-color: white;
 }
 
+.contact-title{
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .contact-page-container{
   padding-top: calc(80px + 2% + 4px);
   display: flex;
@@ -351,7 +357,8 @@ p{
   border-top: 1px solid grey;
   background-color: #3590F3;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hm0{
@@ -363,11 +370,21 @@ p{
 }
 
 .footer{
-
   max-width: 1120px;
   width: 100%;
   display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+
+.contact-text{
+  color: white;
   
+}
+
+.contact-line{
+  margin: 5px 0px 5px 0px;
 }
 
 .footer-copy{
