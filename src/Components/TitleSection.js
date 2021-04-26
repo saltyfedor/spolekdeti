@@ -17,7 +17,7 @@ const TitleSection = () => {
                     </div>               
             </div>
             <div className="hero-paragraph">
-                <p className="hmtext">
+                <p id="tabory" className="hmtext">
                 Jsme malá organizace s velikým srdcem pro práci s dětmi, naše začátky sahají do roku 2001
                 kdy jsem byl 10letý zlobivý kluk a rodiče mě odložily na dětský tábor, kam si někam
                 k adršpašským skalám.               

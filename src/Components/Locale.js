@@ -10,12 +10,13 @@ import '../index.css'
 
 const Locale = () => {
     return (
-        <div className="locale-container">
+        <div id="lokal" className="locale-container">
             <div className="locale">
-            <div className="locale-gallery">
-                    <div className="locale-image" style={{ backgroundImage: `url(${poolPicture})`}}></div>
-                    <div className="locale-image" style={{ backgroundImage: `url(${homesPicture})`}}></div>
-                    <div className="locale-image" style={{ backgroundImage: `url(${playgroundPicture})`}}></div>
+                <div className="locale-gallery">
+                    <img className="locale-image" alt="obrázek z lokality" src={poolPicture}></img>
+                    <img className="locale-image" alt="obrázek z lokality" src={homesPicture}></img>
+                    <img className="locale-image" alt="obrázek z lokality" src={playgroundPicture}></img>
+                    
             </div>
                 <h1 className="locale-title">AREÁL SKLÁŘ V OSTRUŽNĚ</h1>
                 <p className="locale-paragraph hmtext">
@@ -28,10 +29,10 @@ const Locale = () => {
                     mohou povalovat u soukromé vodní nádrže a chytat bronz. Okolí kempu, které je tvořeno převážně
                     Českým rájem nabízí množství zajímavých turistických výletů, jak pro pěší, tak pro cyklisty.
                 </p>                             
-            <div className="locale-gallery">
-                    <div className="locale-image" style={{ backgroundImage: `url(${waterhome})`}}></div>
-                    <div className="locale-image" style={{ backgroundImage: `url(${jidelna})`}}></div>
-                    <div className="locale-image" style={{ backgroundImage: `url(${interior})`}}></div>
+                <div className="locale-gallery">
+                    <img className="locale-image" alt="obrázek z lokality" src={waterhome}></img>
+                    <img className="locale-image" alt="obrázek z lokality" src={jidelna}></img>
+                    <img className="locale-image" alt="obrázek z lokality" src={interior}></img>                  
             </div>
             </div>
         </div>
@@ -39,3 +40,9 @@ const Locale = () => {
 }
 
 export default Locale
+
+/*
+<div className="locale-image" style={{ backgroundImage: `url(${poolPicture})`}}></div>
+                    <div className="locale-image" style={{ backgroundImage: `url(${homesPicture})`}}></div>
+                    <div className="locale-image" style={{ backgroundImage: `url(${playgroundPicture})`}}></div>
+                    */

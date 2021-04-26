@@ -15,7 +15,6 @@ const Camps = ({ campData }) => {
     const changeWidth = () => {
         
         if (targetRef.current) {
-            console.log('cw fired')
             generateContentData(targetRef.current.offsetWidth)
         }
     }
@@ -33,7 +32,6 @@ const Camps = ({ campData }) => {
   
 
     const generateContentData = (width) => {
-        console.log('generate fired w/ ' + width)
        
             const propData = [...campData]
             const newContentData = [];
@@ -61,7 +59,6 @@ const Camps = ({ campData }) => {
                 i++;
             }
         
-            console.log(newContentData)
             updateContentData(newContentData)
         } else {
             updateShowNav(false)
@@ -88,13 +85,12 @@ const Camps = ({ campData }) => {
     }
     
     const handleDotClick = (rowNum) => {
-        console.log('dot click')
         updateCurrentRow(rowNum)
     }
 
     return (
         
-        <div className="camp-section-container" >          
+        <div  className="camp-section-container" >          
             <h1 className="camp-section-title">TÁBORY</h1>
             <div className="camp-section">
                 <div className="camp-preview-wrapper" ref={targetRef}>

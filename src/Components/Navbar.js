@@ -10,8 +10,10 @@ const Navbar = () => {
             <Link to={`/`} style={{ textDecoration: 'none' }}>
                 <img src={logo} alt='logo' className="logo-top"></img>
             </Link>            
-            <div className="navbar-links">                
-                <Link to={`/Kontakt`} style={{ textDecoration: 'none' }} className="nav-link">KONTAKT</Link>
+            <div className="navbar-links">
+                <a href="#tabory" className="nav-link"><h3 style={{margin:0}}>TÁBORY</h3></a>
+                <a href="#lokal" className="nav-link"><h3 style={{margin:0}}>LOKALITA</h3></a>
+                <a href="#kontakt" className="nav-link"><h3 style={{margin:0}}>KONTAKT</h3></a>
             </div>
         </div>
     )

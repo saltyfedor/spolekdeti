@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import CampPreview from './CampPreview'
 import leftArrow from '../Images/icons/left-arrow.svg'
 import rightArrow from '../Images/icons/right-arrow.svg'
