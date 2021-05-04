@@ -1,4 +1,4 @@
-import React, { useState, useRef, useLayoutEffect } from 'react'
+import React, { useState, useEffect, useRef, useLayoutEffect } from 'react'
 import CampRow from './CampRow'
 import CampNav from './CampNav'
 
@@ -21,14 +21,27 @@ const Camps = ({ campData }) => {
 
     useLayoutEffect(() => {
         changeWidth(); 
-    }, []);  
+    }, []);
+    
+    useEffect(() => {
+        if (typeof window === 'undefined') return; //specific for gatsby or applications using webpack
+        
+        changeWidth();
+        
+        window.addEventListener("resize", handleResize);
+        
+        handleResize();
+        
+        return () => window.removeEventListener("resize", handleResize);
+      }, []);
 
   
-
-    window.addEventListener('resize', ()=>{
-        clearInterval(movement_timer);
-        movement_timer = setTimeout(changeWidth, RESET_TIMEOUT);
-    });
+    
+        const handleResize = () => {
+            clearInterval(movement_timer);
+            movement_timer = setTimeout(changeWidth, RESET_TIMEOUT);
+        }
+ 
   
 
     const generateContentData = (width) => {
