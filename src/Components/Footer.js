@@ -8,9 +8,7 @@ const Footer = () => {
                 <div className="contact-text">
                     <h3 id="kontakt" className="footer-copy">KONTAKT</h3>
                     <p className="contact-line">Jednatel firmy: Michal Šefrna</p>
-                    <p  className="contact-line">Sídlo firmy: Raisova 613 Jičín</p>
-                    <p  className="contact-line">Telefon: 724 178 650</p>
-                    <p  className="contact-line">Spolek dětí. s.r.o</p>
+                    <p  className="contact-line">Email: spolekdeti@seznam.cz</p>
                 </div>
             </div>
         
