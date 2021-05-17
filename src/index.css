@@ -285,8 +285,8 @@ p{
 .camp-page{
   min-height: 450px;
   width: 100%;
-  background-position: center;
-  background-size: cover;
+  background-position-y: 25%;
+    background-size: cover;
   
 }
 
@@ -326,6 +326,8 @@ p{
 }
 
 .camp-title{
+  margin-left: 20px;
+  margin-right: 20px;
   color: #3590F3;
 }
 
@@ -403,4 +405,152 @@ p{
   font-weight: bold;
   color: white;
   margin: 10px 0px 10px 0px;
+}
+
+.reservation-container-outer{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.reservation-container-inner{
+  max-width: 1120px;  
+}
+
+.date-menu{
+  display: flex;
+  align-items: center;
+}
+
+.date-selector{
+  border: 2px solid #3590F3;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.date-selector:hover{
+  background-color: #ECE9E9;
+}
+
+.date-selector-child{
+  color: #3590F3;
+  font-weight: bold;
+  margin: 0px;
+  padding: 10px
+}
+
+.date-selected{
+  background-color: #3590F3 !important;
+  color : white !important;
+  font-weight: bold;
+  margin: 10px
+}
+
+.sign-up-button{
+  padding: 12px;
+  background-color: #3590F3;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.registration-outer{
+  padding-top: calc(80px + 2% + 4px);
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.registration-inner{
+  max-width: 750px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+
+}
+
+.registration-title{
+  color: #3590F3;
+  text-align: center;
+}
+
+.registration-section-title{
+  text-align: left;  
+  font-weight: 500;
+}
+
+.input-label{
+  margin-bottom: 5px;
+}
+
+.input-section-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.input-subsection-container{
+  flex-grow: 1; 
+  min-width: 300px;
+  max-width: 350px;
+}
+
+.registration-input{
+  
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+
+  border: 1px solid grey
+}
+
+.registration-input-group{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.radio-button{
+  display: flex;
+  align-items: center;
+}
+
+.tc{
+  text-align: center;
+}
+
+.mt20{
+  margin-top: 20px;
+}
+
+input{
+  height: 20px;
+}
+
+textarea{
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+}
+
+.mr10-r{
+  margin-right: 10px;
+}
+.ml10-r{
+  margin-left: 10px;
 }

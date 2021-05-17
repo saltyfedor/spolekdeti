@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
+import Reservation from './Reservation'
 import apiAdress from './Variables.js'
 import {    
     useParams
@@ -43,11 +44,13 @@ const CampPage = () => {
                         <div className="camp-description" dangerouslySetInnerHTML={{ __html: currentCamp.description }}></div>
                     </div>
                         : null}
-                 </div>
+                </div>
+                <Reservation campId={id} />
                 <div className="camp-gallery-container">
                     <h1 className="camp-gallery-title">Galerie</h1>
                     <p className="camp-gallery-text">Připravujeme fotografie...</p>
-                    </div>
+                </div>
+               
                
             </div>
 
@@ -62,7 +65,3 @@ const CampPage = () => {
 export default CampPage
 
 
-/*
-
- 
-*/
