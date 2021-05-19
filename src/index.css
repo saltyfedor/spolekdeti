@@ -478,20 +478,15 @@ p{
 }
 
 .registration-outer{
-  padding-top: calc(80px + 2% + 4px);
- 
+  padding-top: calc(80px + 2% + 4px); 
   display: flex;
-  justify-content: center;
- 
+  justify-content: center; 
 }
 
 .registration-inner{
-  max-width: 750px;
   margin-left: 20px;
   margin-right: 20px;
-  margin-bottom: 20px;
   width: 100%;
-
 }
 
 .registration-title{
@@ -541,8 +536,27 @@ p{
 }
 
 .registration-inner{
-  margin-top: 25%;
+  margin-top: 20%;
   margin-bottom: 20vh;
+}
+
+.db{
+  display: inline-block;
+}
+
+
+.back-button{
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 110px;
+  text-decoration: none;
+  color: white;
+}
+
+.success-message-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .tc{
@@ -585,4 +599,17 @@ textarea{
 }
 .ml10-r{
   margin-left: 10px;
+}
+
+.mb20{
+  margin-bottom: 20px;
+}
+
+.mv20{
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.mt20{
+  margin-top: 20px;
 }
