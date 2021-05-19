@@ -25,7 +25,7 @@ const Reservation = ({ campId }) => {
     return (
         <div className="reservation-container-outer">
             <div className="reservation-container-inner">
-                <h2>Přihlásit se</h2>
+                <h2 className="mt0">Přihlásit se</h2>
                 {reservationData? <div className="date-menu">
                     <DateMenu data={reservationData} updateDateId={(id) => {updateDateId(id)}}/>
                     {dateId? <Link to={{

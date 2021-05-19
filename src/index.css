@@ -414,18 +414,21 @@ p{
 }
 
 .reservation-container-inner{
-  max-width: 1120px;  
+  max-width: 1120px;
+  flex-grow: 1;  
 }
+
+
 
 .date-menu{
   display: flex;
   align-items: flex-start;
-  width: 100%;
-  max-width: 600px;
+ 
 }
 
 .date-selector{
   border: 2px solid #3590F3;
+  flex-grow: 1;
   margin-right: 10px;
   cursor: pointer;
 }
@@ -535,6 +538,10 @@ p{
 
 .mt20{
   margin-top: 20px;
+}
+
+.mt0{
+  margin-top: 0px;
 }
 
 input{
