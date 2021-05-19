@@ -28,13 +28,15 @@ const Reservation = ({ campId }) => {
                 <h2>Přihlásit se</h2>
                 {reservationData? <div className="date-menu">
                     <DateMenu data={reservationData} updateDateId={(id) => {updateDateId(id)}}/>
-                    <Link to={{
+                    {dateId? <Link to={{
                         pathname: '/rezervace',
                         state: {
                             campId: campId,
                             dateId: dateId
                         }
-                    }} style={{ textDecoration: 'none' }}><div className="sign-up-button">Příhlásit se</div></Link>
+                    }} style={{ textDecoration: 'none' }}><div className="sign-up-button">Příhlásit se</div></Link> : 
+                        <div className="sign-up-button-inactive">Příhlásit se</div>                 
+                    }
                 </div> : null}               
             </div>
         </div>

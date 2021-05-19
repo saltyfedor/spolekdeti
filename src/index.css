@@ -458,6 +458,15 @@ p{
   text-decoration: none;
 }
 
+.sign-up-button-inactive{
+  padding: 12px;
+  background-color: lightgrey;
+  white-space: nowrap;
+  color: darkgray;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .registration-outer{
   padding-top: calc(80px + 2% + 4px);
   display: flex;
