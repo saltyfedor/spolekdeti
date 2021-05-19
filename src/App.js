@@ -41,23 +41,27 @@ const App = () => {
           <Route exact path="/">
               <TitleSection />
               {campData ? <Camps campData={campData}/> : null}
-              <Locale />
+            <Locale />
+            <Footer />
           </Route>
           <Route path="/Camp/:id">
-              <CampPage />
+            <CampPage />
+            <Footer />
           </Route>
           <Route path="/Kontakt">
-              <Contact />
+            <Contact />
+            <Footer />
           </Route>
           <Route path="/rezervace">
-             <CampRegistration />
+            <CampRegistration />
+            <Footer />
           </Route>
           <Route path="/success">
              <RegistrationSuccess />
           </Route>
           </Switch>
         
-        <Footer />
+      
       </Router>
     </div>
   )

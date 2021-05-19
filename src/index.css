@@ -470,11 +470,19 @@ p{
   text-decoration: none;
 }
 
+.r-footer-container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .registration-outer{
   padding-top: calc(80px + 2% + 4px);
+ 
   display: flex;
   justify-content: center;
-  background-color: white;
+ 
 }
 
 .registration-inner{
@@ -530,6 +538,11 @@ p{
 .radio-button{
   display: flex;
   align-items: center;
+}
+
+.registration-inner{
+  margin-top: 25%;
+  margin-bottom: 20vh;
 }
 
 .tc{
