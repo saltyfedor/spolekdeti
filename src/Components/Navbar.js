@@ -21,7 +21,3 @@ const Navbar = () => {
 
 export default Navbar
 
-/*
- <a href="#tabory" className="nav-link"><h3 style={{margin:0}}>TÁBORY</h3></a>
-                <a href="#lokal" className="nav-link"><h3 style={{margin:0}}>LOKALITA</h3></a>
-                */
