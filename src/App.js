@@ -7,6 +7,7 @@ import Footer from './Components/Footer.js'
 import CampPage from './Components/CampPage'
 import Contact from './Components/Contact'
 import CampRegistration from './Components/CampRegistration'
+import RegistrationSuccess from './Components/RegistrationSuccess'
 import apiAdress from './Components/Variables'
 import {
   BrowserRouter as Router,
@@ -50,6 +51,9 @@ const App = () => {
           </Route>
           <Route path="/rezervace">
              <CampRegistration />
+          </Route>
+          <Route path="/success">
+             <RegistrationSuccess />
           </Route>
           </Switch>
         

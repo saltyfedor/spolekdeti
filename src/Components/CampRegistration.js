@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import apiAdress from './Variables'
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 const CampRegistration = () => {
     const location = useLocation()
     const { campId, dateId } = location.state
@@ -181,7 +182,7 @@ const CampRegistration = () => {
                                 <textarea className="registration-input" rows={5} maxLength='50' onChange={(event)=>{updateInfo({other:event.target.value})}}/>
                         </div>                        
                 </div>
-                <div className='sign-up-button tc mt20' onClick= {() =>{addCustomer()}}>Rezervovat</div>
+                <Link to={`/success`} style={{ textDecoration: 'none' }}><div className='sign-up-button tc mt20' onClick= {() =>{addCustomer()}}>Rezervovat</div></Link>
             </div>
         </div>
     )
