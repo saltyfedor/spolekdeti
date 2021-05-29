@@ -621,7 +621,7 @@ textarea{
   margin-top: 20px;
 }
 
-@media(max-width: 650px){
+@media(max-width: 660px){
   .meznik{
     display: none;
   }
