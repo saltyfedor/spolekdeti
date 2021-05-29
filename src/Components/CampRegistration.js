@@ -95,7 +95,7 @@ const CampRegistration = () => {
   
     return (
         <div className="registration-outer">
-            <div className="registration-inner">
+            <div className="registration-inner-formpage">
                 <h1 className="registration-title">Přihláška</h1>
                              
                 <div className="input-section-container">
@@ -106,7 +106,7 @@ const CampRegistration = () => {
                         <input className="registration-input" maxLength='50' onChange={(event)=>{updateCustomer({cemail:event.target.value})}}/>
                         </div>
                         <h3 className="registration-section-title">Účastník tábora</h3>
-                        <div className="registration-input-group mr10-r">
+                        <div className="registration-input-group">
                             <p className="input-label">Jméno a příjmení*</p>
                             <input className="registration-input" maxLength='50' onChange={(event)=>{updateCustomer({full_name:event.target.value})}}/>
                         </div>
@@ -123,8 +123,9 @@ const CampRegistration = () => {
                             <input className="registration-input" maxLength='50' onChange={(event)=>{updateCustomer({adress:event.target.value})}}/>
                          </div>
                     </div>
-                    <div className="input-subsection-container ml10-r">
-                        <h3 className="registration-section-title">Rodiče(zákonní zástupci)</h3>
+                    <div className="meznik"></div>
+                    <div className="input-subsection-container">
+                       
                         <div className="registration-input-group">
                             <p className="input-label">Jméno matky*</p>
                             <input className="registration-input" maxLength='50' onChange={(event)=>{updateCustomer({mname:event.target.value})}}/>
