@@ -1,6 +1,17 @@
 import React from 'react'
+import apiAdress from './Variables'
+
 
 const Footer = () => {
+
+    const sendMail = () => {
+        fetch(`${apiAdress}sendmail`, {
+            method: 'GET',     
+          })
+        .then(res => res.json())
+            
+    }
+
     return (
         <div className="footer-container">
             <div className="footer">
@@ -13,6 +24,7 @@ const Footer = () => {
                     <p className="contact-line">Adresa: Raisová 613, Jičín, 50601</p>
                     <p className="contact-line">Číslo účtu: 3042393053/0800</p>
                 </div>
+                <button onClick={sendMail}>Test</button>
             </div>
         
         </div>
