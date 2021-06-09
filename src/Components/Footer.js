@@ -23,8 +23,7 @@ const Footer = () => {
                     <p className="contact-line">Telefon: +420 608 159 466</p>
                     <p className="contact-line">Adresa: Raisová 613, Jičín, 50601</p>
                     <p className="contact-line">Číslo účtu: 3042393053/0800</p>
-                </div>
-                <button onClick={sendMail}>Test</button>
+                </div>               
             </div>
         
         </div>
