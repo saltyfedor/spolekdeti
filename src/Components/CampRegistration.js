@@ -31,7 +31,7 @@ const CampRegistration = () => {
 
     const [showLink, updateShowLink] = useState(false)
 
-    useEffect(checkData, [childInfo, customerInfo]);
+    
 
 
     const updateCustomer = (newVal) => {
@@ -71,6 +71,7 @@ const CampRegistration = () => {
         }
     }
 
+    useEffect(checkData, [childInfo, customerInfo]);
     const putNewCustomer = () => {
         console.log('put fired')
         fetch(`${apiAdress}newcustomer`, {
