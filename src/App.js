@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Navbar from './Components/Navbar'
 import TitleSection from './Components/TitleSection'
 import Camps from './Components/Camps.js'
+import CampsLoading from './Components/CampsLoading'
 import Locale from './Components/Locale.js'
 import Footer from './Components/Footer.js'
 import CampPage from './Components/CampPage'
@@ -40,7 +41,7 @@ const App = () => {
           <Switch>
           <Route exact path="/">
               <TitleSection />
-              {campData ? <Camps campData={campData}/> : null}
+              {campData ? <Camps campData={campData}/>: <CampsLoading/>}
             <Locale />
             <Footer />
           </Route>
