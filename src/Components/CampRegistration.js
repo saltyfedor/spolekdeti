@@ -109,8 +109,8 @@ const CampRegistration = () => {
             <div className="registration-inner-formpage">
                 <h1 className="registration-title">Přihláška</h1>
                              
-                <div className="input-section-container">
-                    <div className="input-subsection-container">
+               
+                    
                     <h3 className="registration-section-title">Kontaktní údaje</h3> 
                         <div className="registration-input-group">
                         <p className="input-label">Email*</p>
@@ -132,10 +132,9 @@ const CampRegistration = () => {
                         <div className="registration-input-group">
                             <p className="input-label">Bydliště*</p>
                             <input className="registration-input" maxLength='50' onChange={(event)=>{updateCustomer({adress:event.target.value})}}/>
-                         </div>
-                    </div>
-                    <div className="meznik"></div>
-                    <div className="input-subsection-container">
+                        </div>         
+                   
+                        <h3 className="registration-section-title">Rodiče</h3> 
                        
                         <div className="registration-input-group">
                             <p className="input-label">Jméno matky*</p>
@@ -153,8 +152,8 @@ const CampRegistration = () => {
                             <p className="input-label">Telefon otce*</p>
                             <input className="registration-input" maxLength='50' onChange={(event)=>{updateCustomer({fphone:event.target.value})}}/>
                         </div>
-                    </div>
-                </div>
+                    
+                
                 <h3 className="registration-section-title">Dotazník o zdravotním stavu dítěte (anamnéza)</h3>
                 <div >
                         <div className="registration-input-group">
