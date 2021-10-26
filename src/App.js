@@ -7,8 +7,9 @@ import Locale from './Components/Locale.js'
 import Footer from './Components/Footer.js'
 import CampPage from './Components/CampPage'
 import Contact from './Components/Contact'
-import CampRegistration from './Components/CampRegistration'
+import CampRegistration from './Components/RegistrationForm/CampRegistration'
 import RegistrationSuccess from './Components/RegistrationSuccess'
+import RegistrationError from './Components/RegistrationError';
 import apiAdress from './Components/Variables'
 import {
   BrowserRouter as Router,
@@ -59,6 +60,9 @@ const App = () => {
           </Route>
           <Route path="/success">
              <RegistrationSuccess />
+          </Route>
+          <Route path="/error">
+             <RegistrationError />
           </Route>
           </Switch>
         

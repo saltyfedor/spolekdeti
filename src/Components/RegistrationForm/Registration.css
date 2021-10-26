@@ -1,0 +1,20 @@
+.birth-number-input-container{
+    display: flex;
+    align-items: center;    
+}
+
+.birth-short{
+    margin-left: 10px;
+    max-width: 3rem;
+    text-align: center;
+}
+.birth-long{
+    margin-right: 10px;
+    max-width: 5rem;
+    text-align: center;
+}
+
+.radio-input{
+    display: flex;
+    align-items: center;
+}
