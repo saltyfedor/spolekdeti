@@ -10,10 +10,7 @@ const TitleSection = () => {
                 backgroundImage: `url(${heroImage})`
             }}>               
                     <div className="hero-title-container">
-                        <div className="hero-square">
-                            <h1 className="hero-title">AGENTURA SPOLEK DĚTÍ</h1>
-                            <h2 className="hero-sub-title">Léto plné zábavy</h2>
-                        </div>
+                        
                     </div>               
             </div>
             <div className="hero-paragraph">
@@ -35,3 +32,9 @@ const TitleSection = () => {
  }
 
 export default TitleSection
+
+/*
+<div className="hero-square">
+                            <h1 className="hero-title">AGENTURA SPOLEK DĚTÍ</h1>
+                            <h2 className="hero-sub-title">Léto plné zábavy</h2>
+                        </div>*/
