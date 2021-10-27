@@ -220,7 +220,7 @@ p{
 
 .locale-gallery{
   display: flex;
-  margin-top: 5%;
+  margin-top: 25px;
   justify-content: space-around;
   flex-wrap: wrap;
 }
