@@ -208,7 +208,7 @@ p{
 }
 
 .locale-title{
-  margin-top: 3%;
+  margin-top: 5%;
   margin-bottom: 3%;
   text-align: center;
   color: black
@@ -478,7 +478,7 @@ p{
 }
 
 .registration-outer{
-  padding: 250px 20px 100px 20px; 
+  padding: 105px 20px 100px 20px; 
   display: flex;
   justify-content: center; 
 }
@@ -544,7 +544,7 @@ p{
 }
 
 .registration-inner{
- 
+    padding-top: 150px;
 }
 
 .db{
