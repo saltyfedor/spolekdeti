@@ -43,7 +43,7 @@ p{
   display: flex;
   justify-content: space-between;
     align-items: center;     
-  padding: 1% 2% 1% 2%;  
+  padding: 10px;  
   background-color: white;
   border-radius: 0px 0px 10px 10px;
   margin-bottom: -10px;
@@ -478,7 +478,7 @@ p{
 }
 
 .registration-outer{
-  padding-top: calc(80px + 2% + 4px); 
+  padding: 250px 20px 100px 20px; 
   display: flex;
   justify-content: center; 
 }
@@ -544,8 +544,7 @@ p{
 }
 
 .registration-inner{
-  margin-top: 20%;
-  margin-bottom: 20vh;
+ 
 }
 
 .db{
@@ -573,6 +572,10 @@ p{
 
 .mt20{
   margin-top: 20px;
+}
+
+.mt10{
+  margin-top: 10px;
 }
 
 .mt0{

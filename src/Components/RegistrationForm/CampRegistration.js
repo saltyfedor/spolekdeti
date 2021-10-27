@@ -8,7 +8,7 @@ const CampRegistration = () => {
     const history = useHistory()
     const location = useLocation()
     const { campId, dateId } = location.state
-    const [currentSection, updateCurrentSection] = useState(2) 
+    const [currentSection, updateCurrentSection] = useState(0) 
     const [customerInfo, updateCustomerInfo] = useState({        
         other: ''
     })     

@@ -10,6 +10,7 @@ import Contact from './Components/Contact'
 import CampRegistration from './Components/RegistrationForm/CampRegistration'
 import RegistrationSuccess from './Components/RegistrationSuccess'
 import RegistrationError from './Components/RegistrationError';
+import DashboardContainer from './Components/Dashboard/DashboardContainer';
 import apiAdress from './Components/Variables'
 import {
   BrowserRouter as Router,
@@ -37,32 +38,41 @@ const App = () => {
   return (
     <div className="App">
       <Router>
-      <Navbar />
+      
         
           <Switch>
           <Route exact path="/">
+            <Navbar />
               <TitleSection />
               {campData ? <Camps campData={campData}/>: <CampsLoading/>}
             <Locale />
             <Footer />
           </Route>
           <Route path="/Camp/:id">
+            <Navbar />
             <CampPage />
             <Footer />
           </Route>
           <Route path="/Kontakt">
+            <Navbar />
             <Contact />
             <Footer />
           </Route>
           <Route path="/rezervace">
+            <Navbar />
             <CampRegistration />
             <Footer />
           </Route>
           <Route path="/success">
+            <Navbar />
              <RegistrationSuccess />
           </Route>
           <Route path="/error">
-             <RegistrationError />
+            <Navbar />
+            <RegistrationError />
+          </Route>
+          <Route path="/login">
+             <DashboardContainer />
           </Route>
           </Switch>
         

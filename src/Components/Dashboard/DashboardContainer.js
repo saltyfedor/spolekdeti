@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
+
 import Login from './Login'
 
 const DashboardContainer = () => {
-    const [isLogged, updateIsLogged] = useState(false);
+    const [isLogged, updateIsLogged] = useState({is: false, token: ''});   
     
-    const handleLogIn = () => {
-        updateIsLogged(true)
+    const handleLogIn = (res) => {
+        updateIsLogged({ is: true, token: res.token })
     }
 
     const handleLogOut = () => {
@@ -14,7 +15,7 @@ const DashboardContainer = () => {
 
     return (
         <div>
-            {!isLogged ? <Login handleLogIn={handleLogIn} /> : <div></div>}
+            {!isLogged.is ? <Login handleLogIn={handleLogIn} /> : <div>Vítej</div>}
         </div>
     )
 }
