@@ -16,7 +16,7 @@
 }
 
 .team-card-container{
-    max-width: 215px;  
+    min-width: 215px;  
     justify-self: center; 
     box-shadow: 0px 0px 5px darkgray;
     padding: 25px;    
@@ -28,8 +28,7 @@
 }
 
 .member-image{
-    min-width: 215px;
-    min-height: 215px;    
+    width: 100%;      
     border: transparent;
     border-radius: 50%;
     background-size: contain;
@@ -68,4 +67,14 @@
 
 .mt20{
     margin-top: 20px;
+}
+
+@media(max-width: 529px){
+    .team-card-container{
+        justify-self: stretch;
+    }
+    .team-card-text{
+        max-width: none;
+    }
+   
 }
