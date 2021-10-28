@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import TeamCard from './TeamCard'
 import { CSSTransition } from 'react-transition-group';
 import apiAdress from '../Variables'
@@ -6,6 +6,7 @@ import './Team.css'
 
 const Team = () => {
     let cardList = []
+    const ref = useRef(null);
     const [teamData, updateTeamData] = useState()
     const [displayMore, updateDisplayMore] = useState(false)
     const [dislpayMoreButton, updateDisplayButton] = useState(true)
@@ -41,10 +42,18 @@ const Team = () => {
     }
 
     const getPreviewCards = () => {
+        const getMaxPreviewLength = () => {
+            const width = ref.current.offsetWidth
+            const maxCols = Math.floor(width / 265)
+            if (maxCols === 3) return 3
+            else return 4
+        }
+
         cardList = []
         
+        getMaxPreviewLength()
         teamData.forEach((element, i) => {            
-            if (element.link && element.description && cardList.length < 4) {
+            if (element.link && element.description && cardList.length < getMaxPreviewLength()) {
                 cardList.push(<TeamCard key={i} data={element}/>)
             }
         });        
@@ -62,7 +71,7 @@ const Team = () => {
     return (
         <div className="team-container">
             <h1 className="home-page-title">NÁŠE VEDOUCÍ</h1>
-            <div className="team-display">
+            <div className="team-display" ref={ref}>
                 {teamData ? getPreviewCards() : null}
             </div>
             {teamData ?
