@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import TeamCard from './TeamCard'
+import OrgCard from './OrgCard';
 import { CSSTransition } from 'react-transition-group';
 import apiAdress from '../Variables'
 import './Team.css'
@@ -8,6 +9,7 @@ const Team = () => {
     let cardList = []
     const ref = useRef(null);
     const [teamData, updateTeamData] = useState()
+    const [orgData, updateOrgData] = useState()
     const [displayMore, updateDisplayMore] = useState(false)
     const [dislpayMoreButton, updateDisplayButton] = useState(true)
 
@@ -16,8 +18,14 @@ const Team = () => {
         const data = await res.json()
         updateTeamData(data)
     }
+    const fetchOrg = async () => {
+        const res = await fetch(`${apiAdress}org`)
+        const data = await res.json()
+        updateOrgData(data)
+    }
 
     useEffect(() => { fetchTeam() }, [])
+    useEffect(() => { fetchOrg() }, [])
 
     const getCards = () => {
         const checkCardPreviewList = (obj) => {
@@ -74,10 +82,33 @@ const Team = () => {
         )
     }
 
+    const compare = ( a, b ) => {
+        if ( a.id < b.id ){
+          return -1;
+        }
+        if ( a.id > b.id ){
+          return 1;
+        }
+        return 0;
+      }
+
+    const getOrgCards = () => {
+        const newOrgList = [...orgData].sort(compare)
+        const orgList = newOrgList.map(orgObj => {
+            return (<OrgCard data={orgObj}/>)
+        })
+        return orgList
+    }
+
     return (
         <div className="team-container">
-            
-            <h1 className="home-page-title">NAŠE VEDOUCÍ</h1>
+            <h1 className="home-page-title pt-res">NÁŠ TÝM</h1>
+            {orgData ?
+                <div className="team-display">
+                    {getOrgCards(orgData)}
+                </div>
+                : null}
+            <h1 className="home-page-title mtres">NAŠE VEDOUCÍ</h1>
             <div className="team-display" ref={ref}>
                 {teamData ? getPreviewCards() : null}
             </div>

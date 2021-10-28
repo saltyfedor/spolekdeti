@@ -1,24 +1,15 @@
-import React, {useState, useRef, useEffect} from 'react'
+import React from 'react'
+import fallback from '../../Images/fallback.jpg'
 import apiAdress from '../Variables'
 
 const TeamCard = ({ data }) => {
-    const [imageHeight, updateHeight] = useState(215)
-
-    //const ref = useRef(null); 
-    const backgroundImage = `${apiAdress}images/team/squared/${data.link}`
-
-    /*useEffect(() => {       
-
-        console.log('width', ref.current ? ref.current.offsetWidth - 50 : 0);
-        
-        const imgWidth = ref.current.offsetWidth - 50
-        updateHeight(imgWidth)
-      }, [ref.current]);*/
+    
+    const backgroundImage = `${apiAdress}images/team/squared/${data.link}`  
 
     return (
         <div className="team-card-container">
             <div className="member-image-wrapper">
-                <img className="member-image" src={backgroundImage} alt="obrazek-vedouciho" />
+                <img className="member-image" src={backgroundImage} alt="obrazek-vedouciho" onError={(e)=>{e.target.onerror = null; e.target.src=fallback}}/>
             </div>
             <h3 className=" member-name c-blue">{data.name}</h3>
             <h4 className="member-role">{data.role}</h4>
@@ -33,6 +24,3 @@ const TeamCard = ({ data }) => {
 }
 
 export default TeamCard
-
-/*
-<div className="member-image" style={{ backgroundImage: `url(${backgroundImage})`, height: `${imageHeight}px` }}></div>*/
