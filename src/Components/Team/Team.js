@@ -32,7 +32,7 @@ const Team = () => {
 
         const newCardList = []
         teamData.forEach((memberObj, i) => {
-            if (checkCardPreviewList(memberObj)) {
+            if (checkCardPreviewList(memberObj) && memberObj.link) {
                 newCardList.push(<TeamCard key={i} data={memberObj}/>)
             }
         })            
@@ -44,8 +44,11 @@ const Team = () => {
     const getPreviewCards = () => {
         const getMaxPreviewLength = () => {
             const width = ref.current.offsetWidth
-            const maxCols = Math.floor(width / 265)
-            if (maxCols === 3) return 3
+            console.log(width)
+            const min3col = 265 * 3 + 40
+            const max3col = 265 *4 +60
+            
+            if (width >= min3col && width < max3col) return 3
             else return 4
         }
 
