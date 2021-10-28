@@ -30,24 +30,27 @@ const Team = () => {
             return result
         }
 
-        const newCardList = []
+        const newCardListDes = []
+        const newCardListNoDes = []
         teamData.forEach((memberObj, i) => {
             if (checkCardPreviewList(memberObj) && memberObj.link) {
-                newCardList.push(<TeamCard key={i} data={memberObj}/>)
+                if (memberObj.description) {
+                    newCardListDes.push(<TeamCard key={i} data={memberObj} />)
+                } else {
+                    newCardListNoDes.push(<TeamCard key={i} data={memberObj} />)
+                }
             }
         })            
            
-        return newCardList    
+        return [...newCardListDes, newCardListNoDes]    
         
-    }
+    }   
 
     const getPreviewCards = () => {
         const getMaxPreviewLength = () => {
-            const width = ref.current.offsetWidth
-            console.log(width)
+            const width = ref.current.offsetWidth            
             const min3col = 265 * 3 + 40
-            const max3col = 265 *4 +60
-            
+            const max3col = 265 * 4 + 60            
             if (width >= min3col && width < max3col) return 3
             else return 4
         }
@@ -73,7 +76,8 @@ const Team = () => {
 
     return (
         <div className="team-container">
-            <h1 className="home-page-title">NÁŠE VEDOUCÍ</h1>
+            <h1 className="home-page-title pt-res">NÁŠ TÝM</h1>
+            <h1 className="home-page-title">NAŠE VEDOUCÍ</h1>
             <div className="team-display" ref={ref}>
                 {teamData ? getPreviewCards() : null}
             </div>
@@ -87,7 +91,7 @@ const Team = () => {
                 >                   
                 <div className="team-display mt20">{getCards()}</div>                   
                 </CSSTransition>
-            : null}
+            : null}            
         </div>
     )
 }

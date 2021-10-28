@@ -45,7 +45,8 @@ const App = () => {
           <Route exact path="/">
             <Navbar />
               <TitleSection />
-            {campData ? <Camps campData={campData} /> : <CampsLoading />}
+            {campData ? <Camps campData={campData} /> : <CampsLoading />}  
+           
             <Team/>
             <Locale />            
             <Footer />
