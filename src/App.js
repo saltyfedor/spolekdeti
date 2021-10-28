@@ -11,6 +11,7 @@ import CampRegistration from './Components/RegistrationForm/CampRegistration'
 import RegistrationSuccess from './Components/RegistrationSuccess'
 import RegistrationError from './Components/RegistrationError';
 import DashboardContainer from './Components/Dashboard/DashboardContainer';
+import Team from './Components/Team/Team'
 import apiAdress from './Components/Variables'
 import {
   BrowserRouter as Router,
@@ -44,8 +45,9 @@ const App = () => {
           <Route exact path="/">
             <Navbar />
               <TitleSection />
-              {campData ? <Camps campData={campData}/>: <CampsLoading/>}
-            <Locale />
+            {campData ? <Camps campData={campData} /> : <CampsLoading />}
+            <Team/>
+            <Locale />            
             <Footer />
           </Route>
           <Route path="/Camp/:id">

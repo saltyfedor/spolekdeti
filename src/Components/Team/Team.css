@@ -1,0 +1,71 @@
+.team-container{
+    padding-top: calc(3% + 20px) !important;
+    padding-bottom: calc(3% + 20px) !important;
+    padding: 0px 30px 0px 30px;     
+    
+}
+
+.team-display{   
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.team-card-container{
+    max-width: 215px;  
+    justify-self: center; 
+    box-shadow: 0px 0px 5px darkgray;
+    padding: 25px;    
+    background-color: white;
+}
+
+.team-card-text{
+    max-width: 215px;
+}
+
+.member-image{
+    min-width: 215px;
+    min-height: 215px;    
+    border: transparent;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.member-name{
+    margin-bottom: 0;
+}
+
+.member-role{
+    margin-top: 0;
+}
+
+.more-leads-enter {
+    opacity: 0;
+    transform: translateY(200px);
+    
+  }
+
+.more-leads-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 300ms;
+}
+
+.more-leads-exit {
+    opacity: 1;
+}
+.more-leads-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.mt20{
+    margin-top: 20px;
+}

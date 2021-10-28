@@ -14,7 +14,7 @@ const CampPreview = ({ camp, single }) => {
     }
 
     return (
-        <Link to={`/Camp/${camp.id}`} style={{ textDecoration: 'none' }}>
+        <Link to={`/Camp/${camp.id}`} style={{ textDecoration: 'none', marginLeft: '15px', marginRight: '15px'  }}>
             <div className={`camp-preview-element ${addClasses}`}>
                 <div className="camp-preview-image" style={{backgroundImage: `url(${backgroundImage})`}}></div>          
                 <div className="camp-preview-title-container">

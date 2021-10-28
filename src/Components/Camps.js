@@ -44,12 +44,12 @@ const Camps = ({ campData }) => {
  
   
 
-    const generateContentData = (width) => {
+    const generateContentData = (width) => {       
        
             const propData = [...campData]
             const newContentData = [];
             const totalCampNumber = campData.length
-            const elementsInRow = Math.floor((width - 100) / 280)
+            const elementsInRow = Math.floor((width - 100) / 250)
         if (elementsInRow > 1) {
             updateShowNav(true)
             const numberOfRows = Math.ceil(totalCampNumber / elementsInRow)
@@ -104,7 +104,7 @@ const Camps = ({ campData }) => {
     return (
         
         <div  className="camp-section-container" >          
-            <h1 className="camp-section-title">TÁBORY</h1>
+            <h1 className="home-page-title c-blue">TÁBORY</h1>
             <div className="camp-section">
                 <div className="camp-preview-wrapper" ref={targetRef}>
                     {contentData ? <CampRow contentData={contentData} current={currentRow} handleArrowClick={handleArrowClick} showNav={showNavArrows}/> : null}

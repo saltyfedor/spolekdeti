@@ -9,7 +9,7 @@ const Locale = () => {
     return (
         <div id="lokal" className="locale-container">
             <div className="locale">                
-                <h1 className="locale-title">REKREAČNÍ AREÁL PECKA</h1>
+                <h1 className="home-page-title c-blue">REKREAČNÍ AREÁL PECKA</h1>
                 <p className="locale-paragraph hmtext">
                     Rekreační areál Pecka je oblíbeným areálem, který leží v nádherné a členité krajině nedaleko městečka Pecka, kterému dominuje zřícenina stejnojmenného hradu.
                     Areál se rozprostírá na velmi prostorném pozemku a je obklopen bohatými lesy. 300 m od areálu se nachází velice pěkné koupaliště. Areál je vhodný pro rekreaci rodin s dětmi,
