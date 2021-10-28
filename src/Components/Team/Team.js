@@ -76,7 +76,7 @@ const Team = () => {
 
     return (
         <div className="team-container">
-            <h1 className="home-page-title pt-res">NÁŠ TÝM</h1>
+            
             <h1 className="home-page-title">NAŠE VEDOUCÍ</h1>
             <div className="team-display" ref={ref}>
                 {teamData ? getPreviewCards() : null}
