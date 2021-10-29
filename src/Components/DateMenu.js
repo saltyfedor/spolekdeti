@@ -16,7 +16,7 @@ const DateMenu = ({data, updateDateId}) => {
     const getClosedMenu = () => {
         return (
             <div onClick={() => { updateOpen(true) }}>
-                {currentDate === null ? <div className="date-selector-child" onClick={() => {updateOpen(true)}}>Vybrat termín...</div> : <div className="date-selector-child">{`${currentDate.date}, ${currentDate.price}, zbývá míst : ${currentDate.freeSlots}`}</div>}
+                {currentDate === null ? <div className="date-selector-child" onClick={() => {updateOpen(true)}}>Vybrat termín...</div> : <div className="date-selector-child">{`${currentDate.date}, ${currentDate.price}`}</div>}
             </div>
         )
     }
@@ -24,7 +24,7 @@ const DateMenu = ({data, updateDateId}) => {
     const getOpenMenu = () => {
         const displayList = data.map((date, i) => {
             return <div key={i} onClick={() => { updateCurrentDate(date); updateDateId(date.id);updateOpen(false)}}>
-                <p className="date-selector-child">{`${date.date}, ${date.price}, zbývá míst : ${date.freeSlots}`}</p>
+                <p className="date-selector-child">{`${date.date}, ${date.price}`}</p>
             </div>
         });
 
