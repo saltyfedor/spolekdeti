@@ -15,7 +15,10 @@ const Reservation = ({ campId }) => {
                 data.forEach(date => {
                     const freeSlots = date.capacity - date.occupied
                     Object.assign(date,{freeSlots : freeSlots})
-                });                
+                });
+                data.sort(function(a, b) {
+                    return (a.start < b.start) ? -1 : ((a.start > b.start) ? 1 : 0);
+                });
                 updateReservationData(data)
             })
     }
