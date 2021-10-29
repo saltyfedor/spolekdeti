@@ -6,8 +6,8 @@
 .social-container{
     display: flex;
     justify-content: center;
-    margin-top: 10px;
-    
+    margin-top: 12px;
+    margin-bottom: 10px;
 }
 
 .team-container{
@@ -32,7 +32,7 @@
     justify-self: center; 
     box-shadow: 0px 0px 5px darkgray;
     padding: 25px;    
-    background-color: white;
+    background-color: white; 
 }
 
 .team-card-text{
@@ -89,9 +89,20 @@
     transition: opacity 300ms, transform 300ms;
 }
 
+.more-button{
+    padding: 10px;
+    background-color: white;
+    white-space: nowrap;
+    color: #3590F3;
+    border: 2px solid #3590F3;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
 .long-desc-enter{
     opacity: 0;
-    transform: translateX(-100px);
+    transform: scale(0.9);
 }
 
 .long-desc-enter-active {
@@ -125,12 +136,28 @@
     margin-top: 20px;
 }
 
+.mt10{
+    margin-top: 10px;
+}
+
 .mt5{
     margin-top: 5px !important;
 }
 
 .m0{
     margin: 0;
+}
+
+.mb10{
+    margin-bottom: 15px;
+}
+
+.mt-auto{
+    margin-top: auto;
+}
+
+.pointer{
+    cursor: pointer;
 }
 
 @media(max-width: 1179px){

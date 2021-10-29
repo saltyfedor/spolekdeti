@@ -1,10 +1,10 @@
-import React from 'react'
+import React,{ useState} from 'react'
 import fallback from '../../Images/fallback.jpg'
 import instaIcon from '../../Images/icons/instagram.svg'
 import tiktokIcon from '../../Images/icons/tiktok.svg'
 import apiAdress from '../Variables'
 
-const TeamCard = ({ data }) => {
+const TeamCard = ({ data }) => {   
     
     const backgroundImage = `${apiAdress}images/team/squared/${data.link}`
     
@@ -46,13 +46,8 @@ const TeamCard = ({ data }) => {
             </div>
             <h2 className=" member-name tc c-blue mt25">{data.name}</h2>
             <h3 className="member-role tc">{getRole()}</h3>
-            {data.additional === "influencer" ? getSocial() : null}
-            <p className="team-card-text">
-                {
-                data.description? data.description
-                : null
-                }
-            </p>            
+            {data.additional === "influencer" ? getSocial() : null}                            
+            <p className="team-card-text m0 tc">{data.description}</p>           
         </div>
     )
 }

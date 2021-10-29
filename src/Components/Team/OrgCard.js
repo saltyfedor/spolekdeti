@@ -12,10 +12,9 @@ const OrgCard = ({ data }) => {
     const getDescription = () => {
         if (data.description_long && data.description_short) {
             return (
-                <div>
-                    
+                <div>                    
                     <p className="team-card-text m0 mt5">{data.description_short}</p>
-                    {showLongButton ? <div className="sign-up-button tc mt20" onClick={() => updateShowLong(true)}>Zobrazit více</div> : null}
+                    {showLongButton ? <div className="sign-up-button tc mt10" onClick={() => updateShowLong(true)}>O mně</div> : null}
                     <CSSTransition
                     in={showLongDesc}
                     timeout={300}
