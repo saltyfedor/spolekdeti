@@ -1,5 +1,5 @@
 import React from 'react'
-import NavDot from './NavDot'
+import NavDot from '../NavDot'
 
 const CampNav = ({ rowNumber, rowCurrent, handleDotClick }) => {
     

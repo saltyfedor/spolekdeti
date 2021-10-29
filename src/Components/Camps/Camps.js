@@ -1,15 +1,26 @@
-import React, { useState, useEffect, useRef, useLayoutEffect } from 'react'
-import CampRow from './CampRow'
-import CampNav from './CampNav'
+import React, { useState, useEffect} from 'react'
+import './Camps.css'
+import CampsLoading from './CampsLoading'
+import CampCard from './CampCard'
+import apiAdress from '../Variables'
+/*import CampRow from './CampRow'
+import CampNav from './CampNav'*/
 
 
-const Camps = ({ campData }) => {
-    const targetRef = useRef();
-    const [currentRow, updateCurrentRow] = useState(0)
-    const [contentData, updateContentData] = useState()
-    const [showNavArrows, updateShowNav] = useState(true)
-    let movement_timer = null;
-    const RESET_TIMEOUT = 100;
+const Camps = () => {
+    const [campData, updateData] = useState()
+
+    const fetchCamps = async () => {
+        const res = await fetch(`${apiAdress}camps`, {
+          method: 'GET',     
+        }).then(res => res.json())
+        console.log(res)
+        updateData(res)          
+    }
+    
+    useEffect(()=>{fetchCamps()}, [])
+
+    /*
 
 
     const changeWidth = () => {
@@ -99,11 +110,36 @@ const Camps = ({ campData }) => {
     
     const handleDotClick = (rowNum) => {
         updateCurrentRow(rowNum)
+    }*/
+    
+    const getCampCards = () => {
+        const cardList = campData.map(campObj => {
+            return (<CampCard key={campObj.id} data={campObj}/>)
+        })
+        return cardList
     }
 
     return (
         
         <div  className="camp-section-container" >          
+            <h1 className="home-page-title c-blue">TÁBORY</h1>
+            
+                {campData ?
+                    <div className="camp-section">
+                        {getCampCards()}
+                    </div>
+                    : <CampsLoading />}
+           
+        </div>
+      
+    )
+ }
+
+export default Camps
+
+
+/*
+<div  className="camp-section-container" >          
             <h1 className="home-page-title c-blue">TÁBORY</h1>
             <div className="camp-section">
                 <div className="camp-preview-wrapper" ref={targetRef}>
@@ -111,10 +147,5 @@ const Camps = ({ campData }) => {
                 </div>
                 {contentData ? <CampNav rowNumber={contentData.length} rowCurrent={currentRow} handleDotClick={ handleDotClick}/> : null}
             </div>
-        </div>
-      
-    )
- }
-
-export default Camps
+        </div>*/
 

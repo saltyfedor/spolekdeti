@@ -2,15 +2,7 @@ import React from 'react'
 import apiAdress from './Variables'
 
 
-const Footer = () => {
-
-    const sendMail = () => {
-        fetch(`${apiAdress}sendmail`, {
-            method: 'GET',     
-          })
-        .then(res => res.json())
-            
-    }
+const Footer = () => {    
 
     return (
         <div className="footer-container">

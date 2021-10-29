@@ -1,8 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Navbar from './Components/Navbar'
 import TitleSection from './Components/TitleSection'
-import Camps from './Components/Camps.js'
-import CampsLoading from './Components/CampsLoading'
+import Camps from './Components/Camps/Camps.js'
 import Locale from './Components/Locale.js'
 import Footer from './Components/Footer.js'
 import CampPage from './Components/CampPage'
@@ -12,7 +11,6 @@ import RegistrationSuccess from './Components/RegistrationSuccess'
 import RegistrationError from './Components/RegistrationError';
 import DashboardContainer from './Components/Dashboard/DashboardContainer';
 import Team from './Components/Team/Team'
-import apiAdress from './Components/Variables'
 import {
   BrowserRouter as Router,
   Switch,
@@ -20,21 +18,7 @@ import {
 } from "react-router-dom";
 import './index.css';
 
-const App = () => {
-  
-  const [campData, updateCampData] = useState()   
-
-  const fetchCamps = () => {
-    fetch(`${apiAdress}camps`, {
-      method: 'GET',     
-    })
-      .then(res => res.json())
-      .then(data => {       
-        updateCampData(data)
-      })
-  }
-
-  useEffect(fetchCamps, [])  
+const App = () => {  
 
   return (
     <div className="App">
@@ -44,9 +28,8 @@ const App = () => {
           <Switch>
           <Route exact path="/">
             <Navbar />
-              <TitleSection />
-            {campData ? <Camps campData={campData} /> : <CampsLoading />}  
-           
+            <TitleSection />
+            <Camps/>           
             <Team/>
             <Locale />            
             <Footer />
