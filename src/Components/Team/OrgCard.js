@@ -13,7 +13,7 @@ const OrgCard = ({ data }) => {
         if (data.description_long && data.description_short) {
             return (
                 <div>                    
-                    <p className="team-card-text m0 mt5">{data.description_short}</p>
+                    <p className="team-card-text m0 mt5 tc">{data.description_short}</p>
                     {showLongButton ? <div className="sign-up-button tc mt10" onClick={() => updateShowLong(true)}>O mně</div> : null}
                     <CSSTransition
                     in={showLongDesc}
@@ -22,14 +22,14 @@ const OrgCard = ({ data }) => {
                     unmountOnExit
                     onEnter={() => updateShowButton(false)}
                     >                   
-                        <p className="team-card-text m0">{data.description_long}</p>                   
+                        <p className="team-card-text m0 tc">{data.description_long}</p>                   
                     </CSSTransition>
                 </div>
             )
         }
         else {
             if (data.description) {
-                return (<p className="team-card-text">{data.description}</p>)
+                return (<p className="team-card-text tc">{data.description}</p>)
             }
             else return null
         }
