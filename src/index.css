@@ -578,6 +578,10 @@ textarea{
   margin-top: 20px;
 }
 
+.mt0{
+  margin-top: 0;
+}
+
 @media(max-width: 660px){
   .meznik{
     display: none;
