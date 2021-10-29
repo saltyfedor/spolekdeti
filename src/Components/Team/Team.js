@@ -16,6 +16,7 @@ const Team = () => {
     const fetchTeam = async () => {
         const res = await fetch(`${apiAdress}team`)
         const data = await res.json()
+        console.log(data)
         updateTeamData(data)
     }
     const fetchOrg = async () => {
@@ -67,7 +68,7 @@ const Team = () => {
         
         getMaxPreviewLength()
         teamData.forEach((element, i) => {            
-            if (element.link && element.description && cardList.length < getMaxPreviewLength()) {
+            if (element.link && element.description && element.additional === "influencer" && cardList.length < getMaxPreviewLength()) {
                 cardList.push(<TeamCard key={i} data={element}/>)
             }
         });        

@@ -1,3 +1,15 @@
+.social-icon{
+    height: 50px;
+    margin: 0px 5px 0px 5px;
+}
+
+.social-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+
 .team-container{
     padding-top: calc(3% + 20px) !important;
     padding-bottom: calc(3% + 20px) !important;
