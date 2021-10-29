@@ -95,20 +95,14 @@ const Team = () => {
     const getOrgCards = () => {
         const newOrgList = [...orgData].sort(compare)
         const orgList = newOrgList.map(orgObj => {
-            return (<OrgCard data={orgObj}/>)
+            return (<OrgCard key={orgObj.id} data={orgObj}/>)
         })
         return orgList
     }
 
     return (
-        <div className="team-container">
-            <h1 className="home-page-title pt-res">NÁŠ TÝM</h1>
-            {orgData ?
-                <div className="team-display">
-                    {getOrgCards(orgData)}
-                </div>
-                : null}
-            <h1 className="home-page-title mtres">NAŠE VEDOUCÍ</h1>
+        <div className="team-container">            
+            <h1 className="home-page-title">NAŠE VEDOUCÍ</h1>
             <div className="team-display" ref={ref}>
                 {teamData ? getPreviewCards() : null}
             </div>
@@ -122,7 +116,13 @@ const Team = () => {
                 >                   
                 <div className="team-display mt20">{getCards()}</div>                   
                 </CSSTransition>
-            : null}            
+                : null}
+            <h1 className="home-page-title mtres">VEDENÍ</h1>
+            {orgData ?
+                <div className="team-display">
+                    {getOrgCards(orgData)}
+                </div>
+            : null}
         </div>
     )
 }

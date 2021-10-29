@@ -105,6 +105,10 @@
     margin-top: calc(3% + 20px) !important;
 }
 
+.mt25{
+    margin-top: 25px;
+}
+
 .mt20{
     margin-top: 20px;
 }
