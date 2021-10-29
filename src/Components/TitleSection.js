@@ -16,11 +16,10 @@ const TitleSection = () => {
             <div className="hero-paragraph">
                 <p id="tabory" className="hmtext">
                 Jsme malá organizace s velikým srdcem pro práci s dětmi, naše začátky sahají do roku 2001
-                kdy jsem byl 10letý zlobivý kluk a rodiče mě odložily na dětský tábor, kam si někam
-                k adršpašským skalám.               
+                kdy jsem byl 10 letý zlobivý kluk a rodiče mě odložily na dětský tábor, kam si k adršpašským skalám.               
                 Pak jsme na tábory začali jezdit ve skupinách přátel, když nám pak odbylo osmnáct řekli jsme
-                si, že půjdeme dělat vedoucí. Několik let jsme jezdili a trávili čas s dětmi, pak jsme si řekli že
-                proč nemít své vlastní, no a dnes jsme to právě my kdo stvořil Agenturu Spolek dětí.               
+                si, že půjdeme dělat vedoucí. Několik let jsme jezdili a trávili čas s dětmi, pak jsme si řekli,
+                proč nemít své vlastní, a dnes jsme to právě my kdo stvořil Agenturu Spolek dětí.               
                 Jsme třicetičlenná parta lidí, kteří mají zkušenosti ze zdravotnictví nebo studují anebo tuto
                 práci dělají celý život.
                 Lektoři, Vedoucí, instruktoři ale i známé osobnosti se na Vás těší v roce 2022
@@ -32,9 +31,3 @@ const TitleSection = () => {
  }
 
 export default TitleSection
-
-/*
-<div className="hero-square">
-                            <h1 className="hero-title">AGENTURA SPOLEK DĚTÍ</h1>
-                            <h2 className="hero-sub-title">Léto plné zábavy</h2>
-                        </div>*/
