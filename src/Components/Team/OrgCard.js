@@ -41,8 +41,8 @@ const OrgCard = ({ data }) => {
             <div className="member-image-wrapper">
                 <img className="member-image" src={backgroundImage} alt="obrazek-vedouciho" onError={(e)=>{e.target.onerror = null; e.target.src=fallback}}/>
             </div>
-            <h3 className=" member-name c-blue">{data.name}</h3>
-            <h4 className="member-role">{data.role}</h4>            
+            <h2 className=" member-name mt25 c-blue">{data.name}</h2>
+            <h3 className="member-role">{data.role}</h3>            
             {getDescription()}
             
         </div>
