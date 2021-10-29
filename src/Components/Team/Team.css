@@ -3,6 +3,11 @@
     margin: 0px 5px 0px 5px;
 }
 
+.org-card{
+    height: fit-content;
+    min-height: 415px;
+}
+
 .social-container{
     display: flex;
     justify-content: center;
@@ -14,6 +19,23 @@
     padding-bottom: calc(3% + 20px) !important;
     padding: 0px 30px 0px 30px;     
     
+}
+
+.team-button{
+    padding: 8px;    
+    background-color: white;
+    white-space: nowrap;
+    color: #3590F3;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid #3590F3;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.team-button:hover{
+    color: white;
+    background-color: #3590F3;
 }
 
 .team-display{   
@@ -150,6 +172,8 @@
 .mb10{
     margin-bottom: 15px;
 }
+
+.mb0{margin-bottom: 0px;}
 
 .mt-auto{
     margin-top: auto;

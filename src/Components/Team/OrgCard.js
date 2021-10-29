@@ -14,7 +14,7 @@ const OrgCard = ({ data }) => {
             return (
                 <div>                    
                     <p className="team-card-text m0 mt5 tc">{data.description_short}</p>
-                    {showLongButton ? <div className="sign-up-button tc mt10" onClick={() => updateShowLong(true)}>O mně</div> : null}
+                    {showLongButton ? <div className="team-button tc mt20" onClick={() => updateShowLong(true)}>O MNĚ</div> : null}
                     <CSSTransition
                     in={showLongDesc}
                     timeout={300}
@@ -36,7 +36,7 @@ const OrgCard = ({ data }) => {
     }
 
     return (
-        <div className="team-card-container">
+        <div className="team-card-container org-card">
             <div className="member-image-wrapper">
                 <img className="member-image" src={backgroundImage} alt="obrazek-vedouciho" onError={(e)=>{e.target.onerror = null; e.target.src=fallback}}/>
             </div>

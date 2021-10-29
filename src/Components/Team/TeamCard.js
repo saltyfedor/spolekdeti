@@ -47,7 +47,7 @@ const TeamCard = ({ data }) => {
             <h2 className=" member-name tc c-blue mt25">{data.name}</h2>
             <h3 className="member-role tc">{getRole()}</h3>
             {data.additional === "influencer" ? getSocial() : null}                            
-            <p className="team-card-text m0 tc mt10">{data.description}</p>           
+            <p className="team-card-text mb0 tc mt10">{data.description}</p>           
         </div>
     )
 }
