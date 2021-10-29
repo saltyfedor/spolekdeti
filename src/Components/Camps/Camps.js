@@ -10,7 +10,7 @@ const Camps = () => {
     const [campData, updateData] = useState()
     const [displayAll, updateDisplayAll] = useState(false)
     const [displayMoreButton, updateDisplayButton] = useState(true)
-    const mobile = useCheckMobileScreen() 
+    const mobile = useCheckMobileScreen()    
 
     const fetchCamps = async () => {
         const res = await fetch(`${apiAdress}camps`, {
