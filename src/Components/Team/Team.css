@@ -5,7 +5,7 @@
 
 .org-card{
     height: fit-content;
-    min-height: 415px;
+    min-height: 426px;
 }
 
 .social-container{
@@ -48,7 +48,23 @@
     column-gap: 20px;
 }
 
-.team-card-container{      
+.team-flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+}
+
+.no-vis{
+    display: none;
+}
+
+.team-card-container{
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;      
+    position: relative;
+    height: fit-content;  
+    min-height: 426px;
     justify-self: stretch; 
     box-shadow: 0px 0px 5px darkgray;
     padding: 25px;    
@@ -57,6 +73,12 @@
 
 .team-card-text{
     margin-top: 5px;
+}
+
+.open-container{
+    position: relative;
+    flex-grow: 1;
+    background: white;
 }
 
 .member-image{
@@ -120,25 +142,32 @@
     text-decoration: none;
   }
 
+.info-wrapper{
+    position: absolute;
+    top:25px;
+    left:25px;
+    right: 25px;
+    bottom: 25px;
+}
+
 .long-desc-enter{
-    opacity: 0;
-    transform: scale(0.9);
+   transform: translateY(100%);
+       
 }
 
 .long-desc-enter-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: transform 150ms;
+    transform: translateY(0px);
+    
+    transition: transform 500ms;
     
 }
 
 .long-desc-exit {
-    opacity: 1;
+    transform: translateY(0px);
 }
 .long-desc-exit-active {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 300ms, transform 300ms;
+    transform: translateY(100%);
+    transition: transform 500ms;
 }
 
 .h-min-c{
@@ -147,6 +176,10 @@
 
 .mtres{
     margin-top: calc(3% + 20px) !important;
+}
+
+.mt66{
+    margin-top: 86px;
 }
 
 .mt25{
@@ -167,6 +200,12 @@
 
 .m0{
     margin: 0;
+}
+
+.bt-blue{
+    border-top: solid 2px #3590F3;
+    margin-top: 10px;
+    padding-top: 10px;
 }
 
 .mb10{

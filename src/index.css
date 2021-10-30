@@ -47,6 +47,7 @@ p{
   background-color: white;
   border-radius: 0px 0px 10px 10px;
   margin-bottom: -10px;
+  z-index: 1;
 }
 
 .navbar-links{
