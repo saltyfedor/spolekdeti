@@ -13,11 +13,32 @@ const Team = () => {
     const [displayMore, updateDisplayMore] = useState(false)
     const [dislpayMoreButton, updateDisplayButton] = useState(true)
 
+    const getSortedTeam = (data) => {
+        const teamList = []
+        data.forEach(obj => {
+            if (obj.order) {
+                teamList.push(obj)
+            }
+        })
+
+        teamList.sort(function(a, b) { 
+            return a.order - b.order;
+        })
+
+        data.forEach(obj => {
+            if (!obj.order) {
+                teamList.push(obj)
+            }
+        })
+
+        return teamList
+    }
+
     const fetchTeam = async () => {
         const res = await fetch(`${apiAdress}team`)
-        const data = await res.json()
-        console.log(data)
-        updateTeamData(data)
+        const data = await res.json()       
+        
+        updateTeamData(getSortedTeam(data))
     }
     const fetchOrg = async () => {
         const res = await fetch(`${apiAdress}org`)
@@ -121,7 +142,7 @@ const Team = () => {
             <h1 className="home-page-title mtres">VEDENÍ</h1>
             {orgData ?
                 <div className="team-display">
-                    {getOrgCards(orgData)}
+                    {getOrgCards(orgData)}                    
                 </div>
             : null}
         </div>

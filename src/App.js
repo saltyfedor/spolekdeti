@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './Components/Navbar'
+import Navbar from './Components/Nav/Navbar'
 import TitleSection from './Components/TitleSection'
 import Camps from './Components/Camps/Camps.js'
 import Locale from './Components/Locale.js'
@@ -11,6 +11,7 @@ import RegistrationSuccess from './Components/RegistrationSuccess'
 import RegistrationError from './Components/RegistrationError';
 import DashboardContainer from './Components/Dashboard/DashboardContainer';
 import Team from './Components/Team/Team'
+import Voucher from './Components/Voucher/Voucher';
 import {
   BrowserRouter as Router,
   Switch,
@@ -59,6 +60,10 @@ const App = () => {
           </Route>
           <Route path="/login">
              <DashboardContainer />
+          </Route>
+          <Route path="/voucher">
+            <Navbar/>
+            <Voucher/>
           </Route>
           </Switch>
         

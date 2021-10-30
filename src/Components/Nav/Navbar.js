@@ -1,7 +1,8 @@
 import React from 'react'
-import '../index.css'
+import '../../index.css'
+import './Nav.css'
 import {Link} from 'react-router-dom'
-import logo from '../Images/logo_small.png'
+import logo from '../../Images/logo_small.png'
 
 const Navbar = () => {
 
@@ -10,7 +11,10 @@ const Navbar = () => {
             <Link to={`/`} style={{ textDecoration: 'none' }}>
                 <img src={logo} alt='logo' className="logo-top"></img>
             </Link>            
-            <div className="navbar-links">               
+            <div className="navbar-links">
+                <Link to={`/voucher`} style={{ textDecoration: 'none' }}>
+                    <a href="#kontakt" className="nav-link christmas"><h4 style={{margin:0}}>KUP DÁREK</h4></a>
+                </Link>
                 <a href="#kontakt" className="nav-link"><h4 style={{margin:0}}>KONTAKT</h4></a>
             </div>
         </div>

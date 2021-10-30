@@ -1,0 +1,11 @@
+.voucher-page{
+    margin-top: 104px;
+
+}
+
+.loader-container{
+    position: absolute;    
+    left: 50%;
+    transform: translateX(-50%);
+}
+

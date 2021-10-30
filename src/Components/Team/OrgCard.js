@@ -36,7 +36,7 @@ const OrgCard = ({ data }) => {
     }
 
     return (
-        <div className="team-card-container org-card">
+        <div className={`team-card-container org-card ${showLongDesc? 'two-rows' : null}`}>
             <div className="member-image-wrapper">
                 <img className="member-image" src={backgroundImage} alt="obrazek-vedouciho" onError={(e)=>{e.target.onerror = null; e.target.src=fallback}}/>
             </div>

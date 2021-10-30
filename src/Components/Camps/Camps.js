@@ -6,7 +6,7 @@ import useCheckMobileScreen from './useCheckMobileScreen'
 import { CSSTransition } from 'react-transition-group'
 import apiAdress from '../Variables'
 
-const Camps = () => {
+const Camps = ({voucher}) => {
     const [campData, updateData] = useState()
     const [displayAll, updateDisplayAll] = useState(false)
     const [displayMoreButton, updateDisplayButton] = useState(true)
@@ -61,7 +61,7 @@ const Camps = () => {
         return cardList
     }
 
-    if (campData) {
+    if (campData && !voucher) {
     
         if (!mobile) {
             return (
@@ -107,7 +107,7 @@ const Camps = () => {
                 </div>      
             </div>  
         )
-    }
+    } 
  }
 
 export default Camps
