@@ -45,7 +45,7 @@ const CampPage = () => {
                     </div>
                         : null}
                 </div>
-                <Reservation campId={id} />
+                <Reservation campId={id} price={currentCamp.price}/>
                 <div className="camp-gallery-container">
                     <h1 className="camp-gallery-title">Galerie</h1>
                     <p className="camp-gallery-text">Připravujeme fotografie...</p>

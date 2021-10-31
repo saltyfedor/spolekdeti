@@ -4,7 +4,7 @@ import apiAdress from './Variables.js'
 import { Link } from "react-router-dom";
 
 
-const Reservation = ({ campId }) => {    
+const Reservation = ({ campId, price }) => {    
     const [reservationData, updateReservationData] = useState()
     const [dateId, updateDateId] = useState()
 
@@ -18,20 +18,20 @@ const Reservation = ({ campId }) => {
                 });
                 data.sort(function(a, b) {
                     return (a.start < b.start) ? -1 : ((a.start > b.start) ? 1 : 0);
-                });
+                });                
                 updateReservationData(data)
             })
     }
 
     useEffect(fetchData, [])
-    console.log(reservationData)
+    
     
     return (
         <div className="reservation-container-outer">
             <div className="reservation-container-inner">
                 <h2 className="mt0">Přihlásit se</h2>
                 {reservationData? <div className="date-menu">
-                    <DateMenu data={reservationData} updateDateId={(id) => {updateDateId(id)}}/>
+                    <DateMenu data={reservationData} price={price} updateDateId={(id) => {updateDateId(id)}}/>
                     {dateId? <Link to={{
                         pathname: '/rezervace',
                         state: {

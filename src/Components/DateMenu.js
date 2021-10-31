@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react'
+import moment from 'moment'
 
-const DateMenu = ({ data, updateDateId }) => {
+const DateMenu = ({ data, price, updateDateId }) => {
     
     const [isOpen, updateOpen] = useState(false)
     const [currentDate, updateCurrentDate] = useState(null)
@@ -31,17 +32,27 @@ const DateMenu = ({ data, updateDateId }) => {
     }
 
     const getOpenMenu = () => {
-        const displayList = data.map((date, i) => {
-            return <div key={i} onClick={() => { updateCurrentDate(date); updateDateId(date.id);updateOpen(false)}}>
-                <p className="date-selector-child">{`${date.date}, ${date.price}`}</p>
-            </div>
-        });
+        const choiceList = []
+        data.forEach(turnus => {
+            if (turnus.available) {
+                choiceList.push (
+                    <div key={turnus.id} onClick={() => { updateCurrentDate(turnus); updateDateId(turnus.id); updateOpen(false) }}>
+                        <p className="date-selector-child">{`od ${moment(turnus.start).format('DD.MM.YYYY')} do ${moment(turnus.end).format('DD.MM.YYYY')}, ${price} Kč`}</p>
+                    </div>
+                )
+            } else {
+                choiceList.push (
+                    <div key={turnus.id} onClick={() => { updateCurrentDate(turnus); updateDateId(turnus.id); updateOpen(false) }}>
+                        <p className="date-selector-child-inactive">{`od ${moment(turnus.start).format('DD.MM.YYYY')} do ${moment(turnus.end).format('DD.MM.YYYY')} (Turnus je již plný)`}</p>
+                    </div>
+                )
+            }
+        });      
 
-        return displayList
+        return choiceList
     }
     
-    const getClasses = () => {
-        console.log(data.length)
+    const getClasses = () => {       
         if(data.length === 0) return 'date-selector-inactive'
     }
 

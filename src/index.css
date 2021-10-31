@@ -398,7 +398,7 @@ p{
   padding: 10px
 }
 .date-selector-child-inactive{
-  color: inherit;
+  color: darkgrey;
   font-weight: bold;
   margin: 0px;
   padding: 10px;
