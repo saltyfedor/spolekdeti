@@ -60,16 +60,16 @@ const TeamCard = ({ data }) => {
 
     return (
         <div className={`team-card-container`}>
-            <div className="info-wrapper  team-flex-col">
-            <div> 
-            <div className="member-image-wrapper">
-                <img className="member-image" src={backgroundImage} alt="obrazek-vedouciho" onError={(e) => { e.target.onerror = null; e.target.src = fallback }} />
-            </div>
-            
-                <h2 className=" member-name tc c-blue mt25">{data.name}</h2>
-                <h3 className="member-role tc">{getRole()}</h3>
-                {data.additional === "influencer" ? getSocial() : null}
-            </div> 
+            <div className={`${showDesc? 'info-wrapper' : ''} team-flex-col`}>
+                <div> 
+                    <div className="member-image-wrapper">
+                        <img className="member-image" src={backgroundImage} alt="obrazek-vedouciho" onError={(e) => { e.target.onerror = null; e.target.src = fallback }} />
+                    </div>
+                    
+                        <h2 className=" member-name tc c-blue mt25">{data.name}</h2>
+                        <h3 className="member-role tc">{getRole()}</h3>
+                        {data.additional === "influencer" ? getSocial() : null}
+                </div> 
                 <div className={`team-button tc mt20 ${currentClasses}`} onClick={handleButtonClick}>O MNĚ</div>
             </div>    
             <CSSTransition

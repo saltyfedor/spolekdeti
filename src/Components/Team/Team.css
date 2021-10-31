@@ -4,8 +4,7 @@
 }
 
 .org-card{
-    height: fit-content;
-    min-height: 426px;
+   
 }
 
 .social-container{
@@ -49,6 +48,7 @@
 }
 
 .team-flex-col{
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;  
@@ -62,9 +62,7 @@
     display: flex;
     overflow: hidden;
     flex-direction: column;      
-    position: relative;
-    height: fit-content;  
-    min-height: 426px;
+    position: relative;    
     justify-self: stretch; 
     box-shadow: 0px 0px 5px darkgray;
     padding: 25px;    
@@ -79,6 +77,8 @@
     position: relative;
     flex-grow: 1;
     background: white;
+    margin-bottom: -25px;
+    padding-bottom: 25px;
 }
 
 .member-image{
@@ -123,9 +123,11 @@
 }
 
 .more-leads-exit {
+    position: absolute;
     opacity: 1;
 }
 .more-leads-exit-active {
+    position: absolute;
     opacity: 0;
     transform: scale(0.9);
     transition: opacity 300ms, transform 300ms;
@@ -147,7 +149,7 @@
     top:25px;
     left:25px;
     right: 25px;
-    bottom: 25px;
+    bottom: 25px
 }
 
 .long-desc-enter{
@@ -163,10 +165,16 @@
 }
 
 .long-desc-exit {
+    position: absolute;
     transform: translateY(0px);
 }
 .long-desc-exit-active {
-    transform: translateY(100%);
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    transform: translateY(calc(100% + 25px));
     transition: transform 500ms;
 }
 
@@ -224,6 +232,14 @@
 
 .two-rows{
     grid-row-end: span 2;
+}
+
+.pos-aboslute{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
 }
 
 .pointer{
