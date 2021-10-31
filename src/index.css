@@ -397,6 +397,20 @@ p{
   margin: 0px;
   padding: 10px
 }
+.date-selector-child-inactive{
+  color: inherit;
+  font-weight: bold;
+  margin: 0px;
+  padding: 10px;
+  cursor: default 
+}
+
+.date-selector-inactive{  
+  background-color: lightgray;
+  color: darkgrey;
+  border: none;
+  padding: 2px;  
+}
 
 .date-selected{
   background-color: #3590F3 !important;

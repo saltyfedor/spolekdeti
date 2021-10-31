@@ -24,6 +24,7 @@ const Reservation = ({ campId }) => {
     }
 
     useEffect(fetchData, [])
+    console.log(reservationData)
     
     return (
         <div className="reservation-container-outer">
