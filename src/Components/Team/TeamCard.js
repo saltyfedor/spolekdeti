@@ -6,8 +6,7 @@ import { CSSTransition } from 'react-transition-group'
 import apiAdress from '../Variables'
 
 const TeamCard = ({ data }) => {   
-    const [showDesc, updateShowDesc] = useState(false)
-    const [currentClasses, updateCurrentClasses] = useState('')    
+    const [showDesc, updateShowDesc] = useState(false)     
     
     const backgroundImage = `${apiAdress}images/team/squared/${data.link}`
     
@@ -49,17 +48,15 @@ const TeamCard = ({ data }) => {
     const getButtonText = () => {
         if (!showDesc) return "O MNĚ"
         else return "SKRÝT"
-    }
-
-    const getClasses = () => {
-        if (showDesc) {
-            return 'no-vis'
-        }
-    }
+    }    
    
+    const getMinHeight = () => {
+        if (data.social) return '426px'
+        else return '360px'
+    }
 
     return (
-        <div className={`team-card-container`}>
+        <div className={`team-card-container`} style={{minHeight: getMinHeight()}}>
             <div className={`${showDesc? 'info-wrapper' : ''} team-flex-col`}>
                 <div> 
                     <div className="member-image-wrapper">
@@ -70,7 +67,7 @@ const TeamCard = ({ data }) => {
                         <h3 className="member-role tc">{getRole()}</h3>
                         {data.additional === "influencer" ? getSocial() : null}
                 </div> 
-                <div className={`team-button tc mt20 ${currentClasses}`} onClick={handleButtonClick}>O MNĚ</div>
+                <div className={`team-button tc mt20`} onClick={handleButtonClick}>O MNĚ</div>
             </div>    
             <CSSTransition
                         in={showDesc}
