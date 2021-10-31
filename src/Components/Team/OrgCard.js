@@ -51,9 +51,11 @@ const OrgCard = ({ data }) => {
                 classNames="long-desc"
                 unmountOnExit                   
             >
-                <div className="open-container">
+                <div className="open-container team-flex-col">
+                    <div>
                     <h2 className=" member-name tc c-blue mt0">{data.name}</h2>
                     <p className="team-card-text mt0 tc bt-blue">{data.description_long}</p>
+                    </div>
                     <div className="team-button tc mt20" onClick={() => updateShowLong(false)}>SKRÝT</div>
                 </div>
             </CSSTransition>

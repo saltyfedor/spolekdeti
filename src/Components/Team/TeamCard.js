@@ -78,9 +78,11 @@ const TeamCard = ({ data }) => {
                         classNames="long-desc"
                         unmountOnExit                        
                     >
-                        <div className="open-container">
+                    <div className="open-container team-flex-col">
+                            <div>
                             <h2 className=" member-name tc c-blue mt0">{data.name}</h2>
                             <p className="team-card-text m0 tc bt-blue">{data.description}</p>
+                            </div>
                             <div className="team-button tc mt20" onClick={handleButtonClick}>{getButtonText()}</div>
                         </div>
             </CSSTransition>
