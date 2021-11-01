@@ -13,6 +13,8 @@ const DateMenu = ({ data, price, updateDateId }) => {
         }
     }
 
+    let x;
+
     useEffect(checkDateNum, [])
 
     const getClosedMenu = () => {
