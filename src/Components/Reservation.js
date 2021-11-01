@@ -24,8 +24,9 @@ const Reservation = ({ campId, price }) => {
     }
 
     useEffect(fetchData, [])
+    console.log(window.location.origin)
     
-    if (window.location.origin === "https://spolekdeti.cz/") {
+    if (window.location.origin === 'https://spolekdeti.cz') {
         return(
             <div className="reservation-container-outer">
                     <div className="reservation-container-inner br-blue-2">
