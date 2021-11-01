@@ -1,5 +1,6 @@
 import React from 'react'
 import heroImage from '../Images/hero-image.jpg'
+import SocialFeed from './Social/SocialFeed'
 
 const TitleSection = () => {
     
@@ -25,6 +26,7 @@ const TitleSection = () => {
                 Lektoři, Vedoucí, instruktoři ale i známé osobnosti se na Vás těší v roce 2022
                 </p>
             </div>
+            <SocialFeed/>
         </div>
     )
 

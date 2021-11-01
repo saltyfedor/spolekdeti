@@ -534,6 +534,10 @@ p{
   justify-content: center;
 }
 
+.br-blue-2{
+  border: solid #3590F3 2px;
+}
+
 .tc{
   text-align: center;
 }
