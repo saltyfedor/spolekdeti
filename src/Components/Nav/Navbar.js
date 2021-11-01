@@ -13,7 +13,7 @@ const Navbar = () => {
             </Link>            
             <div className="navbar-links">
                 <Link to={`/voucher`} style={{ textDecoration: 'none' }}>
-                    <a href="#kontakt" className="nav-link christmas"><h4 style={{margin:0}}>KUP DÁREK</h4></a>
+                    <div href="#kontakt" className="nav-link christmas"><h4 style={{margin:0}}>KUP DÁREK</h4></div>
                 </Link>
                 <a href="#kontakt" className="nav-link"><h4 style={{margin:0}}>KONTAKT</h4></a>
             </div>
