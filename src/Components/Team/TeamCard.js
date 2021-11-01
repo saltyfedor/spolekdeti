@@ -11,7 +11,7 @@ const TeamCard = ({ data }) => {
     const backgroundImage = `${apiAdress}images/team/squared/${data.link}`
     
     const getRole = () => {
-        if (data.additional) return `${data.role} / ${data.additional}`
+        if (data.additional === "influencer") return `${data.role} / ${data.additional}`
         else return data.role
     }
 
@@ -20,14 +20,14 @@ const TeamCard = ({ data }) => {
         if (data.social) {
             if (data.social.instagram) {
                 iconList.push(
-                    <a href={`https://www.instagram.com/${data.social.instagram}`}>
+                    <a href={`https://www.instagram.com/${data.social.instagram}`} target="_blank" rel="noopener noreferrer">
                         <img className="social-icon" src={instaIcon} alt="tiktok" />
                     </a>
                 )
             }
             if (data.social.tiktok) {
                 iconList.push(
-                    <a href={`https://www.tiktok.com/${data.social.tiktok}`}>
+                    <a href={`https://www.tiktok.com/${data.social.tiktok}`} target="_blank" rel="noopener noreferrer">
                         <img className="social-icon" src={tiktokIcon} alt="tiktok" />
                     </a>
                 )

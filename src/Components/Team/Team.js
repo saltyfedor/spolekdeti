@@ -89,7 +89,7 @@ const Team = () => {
         
         getMaxPreviewLength()
         teamData.forEach((element, i) => {            
-            if (element.link && element.description && element.additional === "influencer" && cardList.length < getMaxPreviewLength()) {
+            if (element.link && element.description && element.additional === "influencer" || element.additional === "moderator") {
                 cardList.push(<TeamCard key={i} data={element}/>)
             }
         });        
