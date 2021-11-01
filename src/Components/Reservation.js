@@ -23,8 +23,7 @@ const Reservation = ({ campId, price }) => {
             })
     }
 
-    useEffect(fetchData, [])
-    console.log(window.location.origin)
+    useEffect(fetchData, [])    
     
     if (window.location.origin === 'https://spolekdeti.cz') {
         return(
