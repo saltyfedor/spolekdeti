@@ -51,7 +51,7 @@ const Pricing = ({ data }) => {
         <div className="pricing-container">
             
             <h2 className="tc c-green mb0 pricing-text mt0">{`Aktuálně nabízíme tábor za zvýhodněnou cenu ${parseInt(data[0].base) + currentPrice.price} Kč*`}</h2>
-            <h4 className="tc c-green mt0 mb0 pricing-text">{`*Nabídka platí do ${moment(currentPrice.end).format('DD.MM.YYYY')}, konečná cena se odvíjí od data platby `}<span onClick={handleDetailClick} className="pricing-link">podrobnějí</span></h4>
+            <h4 className="tc c-green mt0 mb0 pricing-text">{`*Nabídka platí do ${moment(currentPrice.end).format('DD.MM.YYYY')}, konečná cena se odvíjí od data platby, `}<span onClick={handleDetailClick} className="pricing-link">podrobnějí</span></h4>
            
             <CSSTransition
                         in={showDetail}
