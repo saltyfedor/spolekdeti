@@ -15,7 +15,7 @@ const CampPage = () => {
         fetch(`${apiAdress}camp/${id}`)
             .then(res => res.json())
             .then(data => {
-                const camp = data[0]
+                const camp = data
                 Object.assign(camp, {
                     backgroundImage: `${apiAdress}images/${camp.image_links[0]}`
                 })

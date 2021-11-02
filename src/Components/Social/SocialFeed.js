@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import moment from "moment";
 import apiAdress from "../Variables";
 
 const SocialFeed = () => {
@@ -8,11 +9,15 @@ const SocialFeed = () => {
         const res = await fetch(`${apiAdress}instagram`)
     }
 
+    
+
     return (
         <div className="social-container">
-
+            
         </div>
     )
+    
+    
 }
 
 export default SocialFeed
