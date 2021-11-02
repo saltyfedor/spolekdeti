@@ -48,12 +48,12 @@
 
 .price-detail-enter{
     opacity: 0;
-        
+    transition: opacity 500ms;    
  }
  
  .price-detail-enter-active {
      opacity: 1;   
-     transition: opacity 500ms;
+     
      
  }
  
