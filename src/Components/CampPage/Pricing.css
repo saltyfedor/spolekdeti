@@ -2,13 +2,70 @@
     max-width: 1120px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #48A14D;
+    border: 3px solid #48A14D;
     padding: 20px 25px 20px 25px;
     border-radius: 10px;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pricing-wrapper{
+    margin-left: 36px;
+    margin-right: 36px;
 }
 
 .pricing-text{
-    color: white;
+    color: #48A14D;
+}
+
+.pricing-link{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.detail-display{
+    display: inline-flex;    
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.pricing-separator{
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: solid #48A14D 2px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-detail-text{
+    color: #48A14D;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.price-detail-enter{
+    opacity: 0;
+        
+ }
+ 
+ .price-detail-enter-active {
+     opacity: 1;   
+     transition: opacity 500ms;
+     
+ }
+ 
+ .price-detail-exit {    
+     opacity: 1;
+ }
+ .price-detail-exit-active {    
+     opacity: 0;
+     transition: opacity 500ms;
+ }
+
+.asc{
+    color: #48A14D;
+    align-self: center;
 }
