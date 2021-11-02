@@ -10,6 +10,7 @@ import CampRegistration from './Components/RegistrationForm/CampRegistration'
 import RegistrationSuccess from './Components/RegistrationSuccess'
 import RegistrationError from './Components/RegistrationError';
 import DashboardContainer from './Components/Dashboard/DashboardContainer';
+import Partners from './Components/Partners/Partners';
 import Team from './Components/Team/Team'
 import Voucher from './Components/Voucher/Voucher';
 import {
@@ -32,7 +33,7 @@ const App = () => {
             <TitleSection />
             <Camps/>           
             <Team/>
-            <Locale />            
+            <Locale />           
             <Footer />
           </Route>
           <Route path="/Camp/:id">
@@ -63,7 +64,8 @@ const App = () => {
           </Route>
           <Route path="/voucher">
             <Navbar/>
-            <Voucher/>
+            <Voucher />
+            <Footer />
           </Route>
           </Switch>
         

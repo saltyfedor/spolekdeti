@@ -537,6 +537,19 @@ p{
   justify-content: center;
 }
 
+.footer-logos{
+  display: flex;
+  
+}
+
+.footer-logo{
+  flex-grow: 1;
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 20px;
+  flex-basis: 10px;
+}
+
 .br-blue-2{
   border: solid #3590F3 2px;
 }

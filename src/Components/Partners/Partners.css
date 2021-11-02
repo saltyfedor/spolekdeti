@@ -1,0 +1,9 @@
+.partners-inner{
+    max-width: 1120px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: calc(3% + 20px);
+    padding-bottom: calc(3% + 20px);
+}
