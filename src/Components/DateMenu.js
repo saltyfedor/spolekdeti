@@ -21,7 +21,7 @@ const DateMenu = ({ data, price, updateDateId }) => {
         if (data.length > 0) {
             return (
                 <div onClick={() => { updateOpen(true) }}>
-                    {currentDate === null ? <div className="date-selector-child" onClick={() => { updateOpen(true) }}>Vybrat termín...</div> : <div className="date-selector-child">{`od ${moment(currentDate.start).format('DD.MM.YYYY')} do ${moment(currentDate.end).format('DD.MM.YYYY')}, ${price} Kč`}</div>}
+                    {currentDate === null ? <div className="date-selector-child" onClick={() => { updateOpen(true) }}>Vybrat termín...</div> : <div className="date-selector-child">{`od ${moment(currentDate.start).format('DD.MM.YYYY')} do ${moment(currentDate.end).format('DD.MM.YYYY')}`}</div>}
                 </div>
             )
         } else {
@@ -39,7 +39,7 @@ const DateMenu = ({ data, price, updateDateId }) => {
             if (turnus.available) {
                 choiceList.push (
                     <div key={turnus.id} onClick={() => { updateCurrentDate(turnus); updateDateId(turnus.id); updateOpen(false) }}>
-                        <p className="date-selector-child">{`od ${moment(turnus.start).format('DD.MM.YYYY')} do ${moment(turnus.end).format('DD.MM.YYYY')}, ${price} Kč`}</p>
+                        <p className="date-selector-child">{`od ${moment(turnus.start).format('DD.MM.YYYY')} do ${moment(turnus.end).format('DD.MM.YYYY')}`}</p>
                     </div>
                 )
             } else {

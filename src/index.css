@@ -103,6 +103,9 @@ p{
   color: #3590F3;
 }
 
+.c-green{
+  color: #48A14D
+}
 
 
 .camp-preview-element{
@@ -553,6 +556,8 @@ p{
 .mt0{
   margin-top: 0px;
 }
+
+
 
 input{
   height: 20px;
