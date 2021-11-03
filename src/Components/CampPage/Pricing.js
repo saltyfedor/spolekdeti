@@ -9,21 +9,30 @@ const Pricing = ({ data }) => {
     const now = moment().utc()
 
     const getCurrent = () => {
-        const pricePeriods  = data[0].floating
-        for (var priceFloat in pricePeriods) {            
-            if (now.isBetween(pricePeriods[priceFloat].start, pricePeriods[priceFloat].end)) {
-                return(pricePeriods[priceFloat])
-           }
+        
+        const current = data[0].floating.find(priceFloat => now.isBetween(priceFloat.start, priceFloat.end))
+        if (!current) {
+            return data[0].floating.find(priceFloat => priceFloat.default == true)
         }
+        return current
+    }
+
+    const getSortedPriceFloats = (data) => {
+        data.sort(function(a, b) {
+            return (a.end < b.end) ? -1 : ((a.start > b.end) ? 1 : 0);
+        });
+        return data
     }
 
     const getPriceFloatLines = () => {
-        const pricePeriods = data[0].floating
-        const floatArr = []
-        for (var priceFloat in pricePeriods) {
-            floatArr.push(<h4 className="pricing-detail-text">{`Od ${moment(pricePeriods[priceFloat].start).format('DD.MM.YYYY')} do ${moment(pricePeriods[priceFloat].end).format('DD.MM.YYYY')} : ${pricePeriods[priceFloat].price} Kč`}</h4>)
-            
+        const pricePeriods = getSortedPriceFloats(data[0].floating)
+        const getText = (float) => {
+            if (float.default) return `Do ${moment(float.end).format('DD.MM.YYYY')}`
+            else return `Od ${moment(float.start).format('DD.MM.YYYY')} do ${moment(float.end).format('DD.MM.YYYY')}`
         }
+        const floatArr = pricePeriods.map(priceFloat => {
+            return(<h4 key={priceFloat.start} className="pricing-detail-text">{`${getText(priceFloat)} : ${priceFloat.price} Kč`}</h4>)
+        })       
         return floatArr
     }
     
@@ -45,6 +54,7 @@ const Pricing = ({ data }) => {
     const handleDetailClick = () => {
         updateShowDetail(true)
     }
+    
     
     return (
         <div className="pricing-wrapper">

@@ -8,10 +8,19 @@ import './Camps.css'
 
 const CampCard = ({ data }) => {
     const imageLink = `${apiAdress}images/camps/preview/${data.preview_link}`
+
+    const findEarliest = () => {
+        let first = data.pricing.floating[0]
+        data.pricing.floating.forEach(element => {
+            if (element.start < first.start) first = element
+                
+        });
+        return first.price
+    }
     
     const getPrice = () => {
         if (data?.pricing) {            
-            const price = parseInt(data.pricing.base) + data.pricing.floating.rate_1.price
+            const price = parseInt(data.pricing.base) + findEarliest()
             return price
         } else {
             return ""
