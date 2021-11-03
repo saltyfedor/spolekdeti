@@ -7,11 +7,12 @@ import { useLocation, useHistory } from "react-router-dom";
 const CampRegistration = () => {
     const history = useHistory()
     const location = useLocation()
-    const { campId, dateId } = location.state
+    const { campId, capacity_id } = location.state
     const [currentSection, updateCurrentSection] = useState(0) 
     const [customerInfo, updateCustomerInfo] = useState({        
         other: ''
     })     
+    console.log(capacity_id)
 
     const putNewCustomer = (childInfo) => {
         
@@ -21,7 +22,7 @@ const CampRegistration = () => {
             body: JSON.stringify(
                 {
                     campId: campId,
-                    dateId: dateId,
+                    capacity_id: capacity_id,
                     cname: customerInfo.full_name,
                     cbday: customerInfo.birthday,
                     cbnum: `${customerInfo.birthNumberLong}/${customerInfo.birthNumberShort}`,

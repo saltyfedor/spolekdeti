@@ -29,7 +29,7 @@ const CampCard = ({ data }) => {
 
     return (
         <div className="camp-card-container">
-            <img className="camp-preview-image" src={imageLink} onError={(e) => { e.target.onerror = null; e.target.src = fallback }}></img>
+            <img className="camp-preview-image" src={imageLink} onError={(e) => { e.target.onerror = null; e.target.src = fallback }} alt=""></img>
             <div className="camp-card-container-inner">
                 <h2 className="mt0 c-blue">{data.name}</h2>
                 <div className="camp-card-links">

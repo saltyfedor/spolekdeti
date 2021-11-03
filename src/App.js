@@ -10,7 +10,6 @@ import CampRegistration from './Components/RegistrationForm/CampRegistration'
 import RegistrationSuccess from './Components/RegistrationSuccess'
 import RegistrationError from './Components/RegistrationError';
 import DashboardContainer from './Components/Dashboard/DashboardContainer';
-import Partners from './Components/Partners/Partners';
 import Team from './Components/Team/Team'
 import Voucher from './Components/Voucher/Voucher';
 import {

@@ -4,15 +4,16 @@ import moment from "moment";
 import './Pricing.css'
 
 const Pricing = ({ data }) => {
+    console.log(data)
     const [showDetail, updateShowDetail] = useState(false)
 
-    const now = moment().utc()
+    const now = moment().utc()    
 
     const getCurrent = () => {
         
         const current = data[0].floating.find(priceFloat => now.isBetween(priceFloat.start, priceFloat.end))
         if (!current) {
-            return data[0].floating.find(priceFloat => priceFloat.default == true)
+            return data[0].floating.find(priceFloat => priceFloat.default === true)
         }
         return current
     }

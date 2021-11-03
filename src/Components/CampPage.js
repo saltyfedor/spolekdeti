@@ -26,6 +26,8 @@ const CampPage = () => {
 
     useEffect(fetchCamp, [id])
 
+    
+
     if (currentCamp) {
         return (
             <div className="camp-page-container">

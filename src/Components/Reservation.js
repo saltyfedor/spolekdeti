@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Reservation = ({ campId, price }) => {    
     const [reservationData, updateReservationData] = useState()
-    const [dateId, updateDateId] = useState()
+    const [capacity_id, updateDateId] = useState()
 
     const fetchData = () => {
         fetch(`${apiAdress}date/${campId}`)
@@ -41,11 +41,11 @@ const Reservation = ({ campId, price }) => {
                     <h2 className="mt0">Přihlásit se</h2>
                     {reservationData ? <div className="date-menu">
                         <DateMenu data={reservationData} price={price} updateDateId={(id) => { updateDateId(id) }} />
-                        {dateId ? <Link to={{
+                        {capacity_id ? <Link to={{
                             pathname: '/rezervace',
                             state: {
                                 campId: campId,
-                                dateId: dateId
+                                capacity_id: capacity_id
                             }
                         }} style={{ textDecoration: 'none' }}><div className="sign-up-button">Příhlásit se</div></Link> :
                             <div className="sign-up-button-inactive">Příhlásit se</div>

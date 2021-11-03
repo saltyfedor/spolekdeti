@@ -1,7 +1,5 @@
 import React from 'react'
-import image1 from '../Images/partners/bktour.png'
-import image2 from '../Images/partners/pecka.png'
-import image3 from '../Images/partners/jicin.png'
+
 
 
 const Footer = () => {    
@@ -9,15 +7,10 @@ const Footer = () => {
     return (
         <div className="footer-container">
             <div className="footer">
-                <div>
+               
                     <h3 className="footer-copy">©2021 AGENTURA SPOLEK DĚTÍ</h3>
-                    <h4 className="footer-copy">Partneři :</h4>
-                    <div className="footer-logos">
-                        <img className="footer-logo" src={image1}></img>
-                        <img className="footer-logo" src={image2}></img>
-                        <img className="footer-logo" src={image3}></img>
-                    </div>
-                </div>
+                    
+                
                 <div className="contact-text">
                     <h3 id="kontakt" className="footer-copy">KONTAKT</h3>
                     <p className="contact-line">spoldeti, s.r.o.</p>

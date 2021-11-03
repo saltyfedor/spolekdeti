@@ -11,9 +11,7 @@ const DateMenu = ({ data, price, updateDateId }) => {
             updateDateId(data[0].id)
             updateCurrentDate(data[0])
         }
-    }
-
-    let x;
+    }  
 
     useEffect(checkDateNum, [])
 
