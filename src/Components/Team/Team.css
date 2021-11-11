@@ -3,9 +3,10 @@
     margin: 0px 5px 0px 5px;
 }
 
-/*.org-card{
-   
-}*/
+.org-card{
+   height: min-content;
+   min-height: 410px;
+}
 
 .social-container{
     display: flex;
