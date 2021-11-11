@@ -4,6 +4,7 @@ import apiAdress from "../../../Variables";
 
 const CampEdit = ({token}) => {
     const [campData, updateCampData] = useState()
+    
 
     const fetchCamps = async () => {
         const res = await fetch(`${apiAdress}camps`)
@@ -17,14 +18,28 @@ const CampEdit = ({token}) => {
         const campList = campData.map(camp => {
             return (
               
-                    <CampElement data={camp} token={token}/>
+                <CampElement key={camp.id} data={camp} token={token} updatePricing={updateCampPricing}/>
                   
             )
         })
         return campList
     }
 
-    useEffect(() => {fetchCamps()},[])
+    useEffect(() => { fetchCamps() }, [])
+    
+    const updateCampPricing = (id, base, floating) => {
+        const newData = campData.map(camp => {
+            if (camp.id === id) {
+                const newPricing = Object.assign(camp.pricing, {
+                    base: base,
+                    floating: floating
+                })
+                return Object.assign({}, camp, { pricing: newPricing })
+            } else { return camp }
+        })
+        updateCampData(newData)
+    }
+
     if (campData) {
         return (
             <div className="camp-edit-container">

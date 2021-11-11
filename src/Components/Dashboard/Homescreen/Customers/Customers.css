@@ -1,0 +1,50 @@
+.customers-container{
+   
+    width: 100%;
+    box-sizing: border-box;    
+}
+
+.customers-control-bar{  
+    padding: 20px;  
+    width: 100%;
+    box-sizing: border-box;
+    border: 3px solid #3590F3;
+    border-radius: 25px; 
+   
+}
+
+.customers-data-view{
+    margin-top: 25px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 3px solid #3590F3;
+    border-radius: 25px; 
+}
+
+.camp-selector-menu{
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.name-cell{
+    width: 200px;
+    overflow-x: hidden;
+}
+
+.email-cell{
+    width: 250px;
+}
+
+.customer-display-container{
+    display: flex;
+}
+
+.top-bar{
+    display: flex;
+}
+
+.payment-cell{
+    width: 125px;
+}

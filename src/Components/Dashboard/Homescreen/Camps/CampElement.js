@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CampEditPopup from "./CampEditPopup";
 
-const CampElement = ({ data, token }) => {
+const CampElement = ({ data, token, updatePricing }) => {
     const [displayPopup, updatePopup] = useState(false)
     
     const closePopup = () => {updatePopup(false)}
@@ -10,7 +10,7 @@ const CampElement = ({ data, token }) => {
         <div key={data.id} className="camp-edit-element">
             <h3 className="tc">{data.name}</h3>
             <div className="camp-edit-button tc" onClick={() => {updatePopup(true)}}>Upravit</div>
-            {displayPopup ? <CampEditPopup data={data} token={token} onClose={closePopup}/>: null}
+            {displayPopup ? <CampEditPopup data={data} token={token} onClose={closePopup} update={updatePricing}/>: null}
         </div>
     )
 }

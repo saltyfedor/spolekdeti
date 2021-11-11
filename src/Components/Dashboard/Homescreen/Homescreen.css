@@ -6,8 +6,12 @@
     padding: 15px;
 }
 
+.admin-home-screen{
+    background-color: white;
+}
+
 .camp-popup-outer{
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
@@ -19,13 +23,16 @@
 }
 
 .camp-popup-inner{   
-    background-color: white;
+    background-color: white;   
     padding: 25px;
     border-radius: 5px;
 }
 
 .admin-container{
     padding: 10px 30px 30px 30px;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .admin-nav-link{
@@ -63,7 +70,7 @@
 .camp-edit-button{
     border: 2px solid #3590F3;
     padding: 10px;
-    font-size: 1.15em;
+    
     font-weight: bold;
     cursor: pointer;
     
@@ -71,4 +78,59 @@
 
 .price-input{
     max-width: 60px;
+}
+
+.admin-save-button{
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: #3590F3;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.price-overflow{
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.camp-popup-info{
+    margin-right: 20px;
+}
+
+.popup-wrapper{
+    display: flex;
+}
+
+.price-float-input-container{
+    margin-right: 20px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 2px solid #3590F3;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-float-input-wrapper{
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-float-input-label{
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.price-float-input{
+    margin-top: 10px;
+}
+
+.price-float-input-price{
+    margin-top: 10px;
+    max-width: 4em;
 }

@@ -15,7 +15,7 @@ const DashboardContainer = () => {
 
     return (
         <div>
-            {!isLogged.is ? <Login handleLogIn={handleLogIn} /> : <HomeScreen token={isLogged.token} logOut={handleLogOut}/>}
+            {!isLogged.is ? <Login handleLogIn={handleLogIn} /> : <HomeScreen token={isLogged.token} onLogout={handleLogOut}/>}
         </div>
     )
 }
