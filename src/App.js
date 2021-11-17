@@ -2,10 +2,10 @@ import React from 'react';
 import Navbar from './Components/Nav/Navbar'
 import TitleSection from './Components/TitleSection'
 import Camps from './Components/Camps/Camps.js'
-import Locale from './Components/Locale.js'
+import Locale from './Components/Locale/Locale.js'
 import Footer from './Components/Footer.js'
 import CampPage from './Components/CampPage'
-import Contact from './Components/Contact'
+import Contact from './Components/ContactPage/Contact'
 import CampRegistration from './Components/RegistrationForm/CampRegistration'
 import RegistrationSuccess from './Components/RegistrationSuccess'
 import RegistrationError from './Components/RegistrationError';

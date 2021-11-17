@@ -176,46 +176,14 @@ p{
   max-width: 1140px;
 }
 
-.locale-gallery{
-  display: flex;
-  margin-top: 25px;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
 .locale-paragraph{
   text-align: center;
   line-height: 2;
 }
 
-.locale-image{
-  box-shadow: 0px 0px 5px darkgray;
-  margin: 15px;  
-  min-width: 200px;
-  max-width: 300px;  
-  border: none;
-  border-radius: 20px;
-  background-size: cover;
-  background-position: center;
-}
-
 .camp-page-container{
   padding-top: calc(80px + 2% + 4px);
  
-  display: flex;
-  flex-direction: column;  
-  justify-content: center;
-  background-color: white;
-}
-
-.contact-title{
-  max-width: 1140px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.contact-page-container{
-  padding-top: calc(80px + 2% + 4px);
   display: flex;
   flex-direction: column;  
   justify-content: center;

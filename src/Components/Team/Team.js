@@ -8,8 +8,7 @@ import './Team.css'
 const Team = () => {
     let cardList = []
     const ref = useRef(null);
-    const [teamData, updateTeamData] = useState()
-    const [orgData, updateOrgData] = useState()
+    const [teamData, updateTeamData] = useState()   
     const [displayMore, updateDisplayMore] = useState(false)
     const [dislpayMoreButton, updateDisplayButton] = useState(true)
 
@@ -39,15 +38,9 @@ const Team = () => {
         const data = await res.json()       
         
         updateTeamData(getSortedTeam(data))
-    }
-    const fetchOrg = async () => {
-        const res = await fetch(`${apiAdress}org`)
-        const data = await res.json()
-        updateOrgData(data)
-    }
+    }   
 
-    useEffect(() => { fetchTeam() }, [])
-    useEffect(() => { fetchOrg() }, [])
+    useEffect(() => { fetchTeam() }, [])    
 
     const getCards = () => {
         const checkCardPreviewList = (obj) => {
@@ -63,7 +56,7 @@ const Team = () => {
         const newCardListDes = []
         const newCardListNoDes = []
         teamData.forEach((memberObj, i) => {
-            if (checkCardPreviewList(memberObj) && memberObj.link) {
+            if (checkCardPreviewList(memberObj) && memberObj.link && memberObj.role !== "superstar crew") {
                 if (memberObj.description) {
                     newCardListDes.push(<TeamCard key={i} data={memberObj} />)
                 } else {
@@ -89,8 +82,10 @@ const Team = () => {
         
         getMaxPreviewLength()
         teamData.forEach((element, i) => {            
-            if (element.link && element.description && element.additional === "influencer" || element.additional === "moderator") {
-                cardList.push(<TeamCard key={i} data={element}/>)
+            if (element.link && element.description && element.role !== 'superstar crew') {
+                if (element.additional === "influencer" || element.additional === "moderator") {
+                    cardList.push(<TeamCard key={i} data={element} />)
+                }
             }
         });        
         
@@ -102,24 +97,18 @@ const Team = () => {
                 {dislpayMoreButton ? <div className="sign-up-button tc mt20" onClick={() => updateDisplayMore(true)}>Zobrazit více</div> : null}
             </div>
         )
-    }
+    }   
 
-    const compare = ( a, b ) => {
-        if ( a.id < b.id ){
-          return -1;
-        }
-        if ( a.id > b.id ){
-          return 1;
-        }
-        return 0;
-      }
-
-    const getOrgCards = () => {
-        const newOrgList = [...orgData].sort(compare)
-        const orgList = newOrgList.map(orgObj => {
-            return (<OrgCard key={orgObj.id} data={orgObj}/>)
+    const getSuperStarCards = () => {
+        const starList = []
+        teamData.forEach((memberObj, i) => {           
+            if (memberObj.role === 'superstar crew') {                
+                starList.push(
+                    <TeamCard key={i} data={memberObj}/>
+                )
+            }
         })
-        return orgList
+        return starList
     }
 
     return (
@@ -139,12 +128,12 @@ const Team = () => {
                 <div className="team-display mt20">{getCards()}</div>                   
                 </CSSTransition>
                 : null}
-            <h1 className="home-page-title mtres">VEDENÍ</h1>
-            {orgData ?
-                <div className="team-display">
-                    {getOrgCards(orgData)}                    
-                </div>
-            : null}
+            <h1 className="home-page-title mtres">SUPERSTAR CREW</h1>
+            {teamData ?
+                <div className="team-display mt20">
+                    {getSuperStarCards()}
+                </div> 
+                : null}            
         </div>
     )
 }
