@@ -40,7 +40,7 @@ const CampRegistrationContact = ({ handleNext }) => {
 
     return (
         <>
-             <h3 className="registration-section-title">Kontaktní údaje</h3> 
+            <h3 className="registration-section-title">Kontaktní údaje</h3> 
                 <div className="registration-input-group">
                     <p className="input-label">Email*</p>
                     <input className="registration-input" type="email" maxLength='50' onChange={(event)=>{updateCustomer({cemail:event.target.value})}}/>
@@ -65,7 +65,7 @@ const CampRegistrationContact = ({ handleNext }) => {
                     <p className="input-label">Bydliště*</p>
                     <input className="registration-input" maxLength='50' onChange={(event)=>{updateCustomer({adress:event.target.value})}}/>
                 </div>
-                {allowNext ? <div className='sign-up-button tc mt20' onClick={() => { handleNext(customerInfo, 1) }}>Dále</div> : <div className='sign-up-button-inactive tc mt20'>Dále</div>}
+                {allowNext ? <div className='sign-up-button tc mt20' onClick={() => { handleNext(customerInfo, 2) }}>Dále</div> : <div className='sign-up-button-inactive tc mt20'>Dále</div>}
         </>
     )
 }

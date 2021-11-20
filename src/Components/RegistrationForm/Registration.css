@@ -18,3 +18,18 @@
     display: flex;
     align-items: center;
 }
+
+.checkbox-input{
+    width: 25px;
+    margin: 15px 10px 10px 0px;
+    border-color: #3590F3;
+}
+
+.consent-input-group{
+    display: flex;   
+}
+
+.consent-label{
+    margin: 10px 10px 10px 0px;
+    display: inline-block;
+}

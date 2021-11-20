@@ -2,6 +2,7 @@ import React, { useState} from 'react'
 import CampRegistrationContact from './CampRegistrationContact';
 import CampRegistrationParents from './CampRegistrationParents';
 import CampRegistrationChild from './CampRegistrationChild';
+import CampRegistrationConsent from './CampRegistrionConsent';
 import apiAdress from '../Variables'
 import { useLocation, useHistory } from "react-router-dom";
 const CampRegistration = () => {
@@ -11,11 +12,9 @@ const CampRegistration = () => {
     const [currentSection, updateCurrentSection] = useState(0) 
     const [customerInfo, updateCustomerInfo] = useState({        
         other: ''
-    })     
-    console.log(capacity_id)
+    })    
 
-    const putNewCustomer = (childInfo) => {
-        
+    const putNewCustomer = (childInfo) => {        
         fetch(`${apiAdress}newcustomer`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },           
@@ -46,13 +45,14 @@ const CampRegistration = () => {
     }   
 
     const getCurrentSection = () => {
-        if (currentSection === 0) return <CampRegistrationContact handleNext={handleNextClick} />
-        if (currentSection === 1) return <CampRegistrationParents handleNext={handleNextClick} />
-        if (currentSection === 2) return <CampRegistrationChild handleNext={handleNextClick}/>
+        if (currentSection === 0) return <CampRegistrationConsent handleNext={handleNextClick} />
+        if (currentSection === 1) return <CampRegistrationContact handleNext={handleNextClick} />
+        if (currentSection === 2) return <CampRegistrationParents handleNext={handleNextClick} />
+        if (currentSection === 3) return <CampRegistrationChild handleNext={handleNextClick}/>
     }
 
     const handleNextClick = (data, next) => {
-        if (next !== 3) {
+        if (next !== 4) {
             const newData = Object.assign({}, customerInfo, data)
             updateCustomerInfo(newData)
             updateCurrentSection(next)

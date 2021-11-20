@@ -54,7 +54,7 @@ const CampRegistrationParents = ({ handleNext }) => {
                            <p className="input-label">Telefon otce*</p>
                            <input className="registration-input" maxLength='13' onChange={(event)=>{updateCustomer({fphone:event.target.value})}}/>
                        </div>
-                {allowNext ? <div className='sign-up-button tc mt20' onClick={() => { handleNext(customerInfo, 2) }}>Dále</div> : <div className='sign-up-button-inactive tc mt20'>Dále</div>}
+                {allowNext ? <div className='sign-up-button tc mt20' onClick={() => { handleNext(customerInfo, 3) }}>Dále</div> : <div className='sign-up-button-inactive tc mt20'>Dále</div>}
         </>
     )
 }

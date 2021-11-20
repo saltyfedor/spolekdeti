@@ -86,7 +86,7 @@ const CampRegistrationChild = ({ handleNext }) => {
                                 <textarea className="registration-input" rows={5} maxLength='500' onChange={(event)=>{updateCustomer({other:event.target.value})}}/>
                 </div>                
             </div>            
-            {allowNext ? <div className='sign-up-button tc mt20' onClick={() => { handleNext(customerInfo, 3) }}>Dále</div> : <div className='sign-up-button-inactive tc mt20'>Dále</div>}
+            {allowNext ? <div className='sign-up-button tc mt20' onClick={() => { handleNext(customerInfo, 4) }}>Dále</div> : <div className='sign-up-button-inactive tc mt20'>Dále</div>}
         </>
     )
 }
