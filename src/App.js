@@ -12,6 +12,7 @@ import RegistrationError from './Components/RegistrationError';
 import DashboardContainer from './Components/Dashboard/DashboardContainer';
 import Team from './Components/Team/Team'
 import Voucher from './Components/Voucher/Voucher';
+import GDRP from './Components/Info/GDPR';
 import {
   BrowserRouter as Router,
   Switch,
@@ -65,6 +66,9 @@ const App = () => {
             <Navbar/>
             <Voucher />
             <Footer />
+          </Route>
+          <Route path="/gdpr">
+            <GDRP />
           </Route>
           </Switch>
         
