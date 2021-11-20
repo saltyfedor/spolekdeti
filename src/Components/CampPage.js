@@ -65,10 +65,4 @@ const CampPage = () => {
 
 export default CampPage
 
-/*
-<div className="camp-gallery-container">
-                    <h1 className="camp-gallery-title">Galerie</h1>
-                    <p className="camp-gallery-text">Připravujeme fotografie...</p>
-                </div>*/
-
 
