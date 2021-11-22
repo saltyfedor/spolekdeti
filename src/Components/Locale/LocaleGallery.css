@@ -1,12 +1,24 @@
-.locale-galley-wrapper{
+.locale-galley-wrapper{    
+    margin-top: 25px;
+    padding: 0px 20px;
+    max-width: 1120px;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 25px;
 }
 
-.locale-galley-img{
-    max-width: 300px;
+.locale-galley-img{    
+    box-sizing: border-box;
+    max-width: 45%;
     border: 3px solid #3590F3;
     background-color: #3590F3;
     box-sizing: border-box;
+    margin: 10px;
+    height: auto;    
 }
+
+.locale{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
