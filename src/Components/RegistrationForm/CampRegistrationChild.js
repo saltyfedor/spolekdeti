@@ -77,8 +77,8 @@ const CampRegistrationChild = ({ handleNext }) => {
                         <div className="registration-input-group">
                                 <p className="input-label">Umí dítě plavat?*</p>
                                 <div className="radio-input" onChange={(event)=>{updateCustomer({canSwim:event.target.value})}}>
-                                <input type="radio" value="Ano" name="gender" /> Ano
-                                <input type="radio" value="Ne" name="gender" /> Ne
+                                <input type="radio" value="Dovede" name="gender" /> Ano
+                                <input type="radio" value="Nedovede" name="gender" /> Ne
                                 </div>
                         </div>
                         <div className="registration-input-group">
