@@ -29,10 +29,7 @@
     margin-right: auto;
   }
   
-  .contact-page-container{
-    padding-top: calc(80px + 2% + 4px);
-    display: flex;
-    flex-direction: column;  
-    justify-content: center;
+  .contact-page-container{    
+    padding: 104px 25px 25px 25px;   
     background-color: white;
   }
