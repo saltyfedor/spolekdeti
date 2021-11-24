@@ -3,6 +3,14 @@
     align-items: center;    
 }
 
+.registration-outer{
+    min-height: calc(100vh - 87.5px - 105px);
+    padding: 105px 20px 0px 20px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
 .birth-short{
     margin-left: 10px;
     max-width: 3rem;
@@ -32,4 +40,12 @@
 .consent-label{
     margin: 10px 10px 10px 0px;
     display: inline-block;
+}
+
+.error-border{
+    border: 2px solid red;
+}
+
+.success-border{
+    border: 2px solid green;
 }

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import './Registration.css'
-
+let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const CampRegistrationContact = ({ handleNext }) => {
     const [allowNext, updateAllowNext] = useState(false)
+    const [emailClasses, updateEmailClasses] = useState('')
     const [customerInfo, updateCustomerInfo] = useState(
         {
             full_name: '',
@@ -21,7 +22,7 @@ const CampRegistrationContact = ({ handleNext }) => {
     }
 
     const checkCustomer = () => {
-        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        
         const checkBirthNum = () => {
             if (customerInfo.birthNumberLong.length === 6 && customerInfo.birthNumberShort.length === 4) return true
             else return false
@@ -36,6 +37,18 @@ const CampRegistrationContact = ({ handleNext }) => {
         
     }
 
+    const updateEmail = (value) => {
+        if (re.test(value.cemail)) {
+            updateCustomer(value)
+            updateEmailClasses('success-border')
+        } else {
+            updateCustomer(value)
+            updateEmailClasses('error-border')
+        }
+    }
+    
+  
+
     useEffect(checkCustomer, [customerInfo])
 
     return (
@@ -43,7 +56,7 @@ const CampRegistrationContact = ({ handleNext }) => {
             <h3 className="registration-section-title">Kontaktní údaje</h3> 
                 <div className="registration-input-group">
                     <p className="input-label">Email*</p>
-                    <input className="registration-input" type="email" maxLength='50' onChange={(event)=>{updateCustomer({cemail:event.target.value})}}/>
+                <input className={`registration-input ${emailClasses}`} type="email" maxLength='50' onChange={(event)=>{updateEmail({cemail:event.target.value})}}/>
                 </div>
             <h3 className="registration-section-title">Účastník tábora</h3>
                 <div className="registration-input-group">
