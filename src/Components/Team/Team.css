@@ -48,6 +48,16 @@
     column-gap: 20px;
 }
 
+.team-display-loading{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1120px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .team-flex-col{
     flex-grow: 1;
     display: flex;

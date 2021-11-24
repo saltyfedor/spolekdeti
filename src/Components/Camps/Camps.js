@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import './Camps.css'
-import CampsLoading from './CampsLoading'
+import Loader from '../Loader/Loader'
 import CampCard from './CampCard'
 import useCheckMobileScreen from './useCheckMobileScreen'
 import { CSSTransition } from 'react-transition-group'
@@ -61,8 +61,7 @@ const Camps = ({voucher}) => {
         return cardList
     }
 
-    if (campData && !voucher) {
-    
+    if (campData) {    
         if (!mobile) {
             return (
         
@@ -102,8 +101,8 @@ const Camps = ({voucher}) => {
         return (
             <div className="camp-section-container" >
                 <h1 className="home-page-title c-blue">TÁBORY</h1>                    
-                    <div className="camp-section">
-                    <CampsLoading/>
+                <div className="camp-section-loading">
+                    <Loader />
                 </div>      
             </div>  
         )

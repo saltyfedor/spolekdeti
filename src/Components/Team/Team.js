@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import TeamCard from './TeamCard'
-import OrgCard from './OrgCard';
+import Loader from '../Loader/Loader';
 import { CSSTransition } from 'react-transition-group';
 import apiAdress from '../Variables'
 import './Team.css'
@@ -35,9 +35,10 @@ const Team = () => {
 
     const fetchTeam = async () => {
         const res = await fetch(`${apiAdress}team`)
-        const data = await res.json()       
-        
-        updateTeamData(getSortedTeam(data))
+        if (res.ok) {
+            const data = await res.json()       
+            updateTeamData(getSortedTeam(data))
+        }        
     }   
 
     useEffect(() => { fetchTeam() }, [])    
@@ -127,13 +128,13 @@ const Team = () => {
                 >                   
                 <div className="team-display mt20">{getCards()}</div>                   
                 </CSSTransition>
-                : null}
+                : <div className="team-display-loading"><Loader /></div>}
             <h1 className="home-page-title mtres">SUPERSTAR CREW</h1>
             {teamData ?
                 <div className="team-display mt20">
                     {getSuperStarCards()}
                 </div> 
-                : null}            
+                : <div className="team-display-loading"><Loader /></div>}            
         </div>
     )
 }
