@@ -76,7 +76,7 @@ const CampRegistrationContact = ({ handleNext }) => {
                 </div>
                 <div className="registration-input-group">
                     <p className="input-label">Bydliště*</p>
-                    <input className="registration-input" maxLength='50' onChange={(event)=>{updateCustomer({adress:event.target.value})}}/>
+                    <input className="registration-input" maxLength='100' onChange={(event)=>{updateCustomer({adress:event.target.value})}}/>
                 </div>
                 {allowNext ? <div className='sign-up-button tc mt20' onClick={() => { handleNext(customerInfo, 2) }}>Dále</div> : <div className='sign-up-button-inactive tc mt20'>Dále</div>}
         </>
