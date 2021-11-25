@@ -3,8 +3,7 @@ import { CSSTransition } from 'react-transition-group'
 import moment from "moment";
 import './Pricing.css'
 
-const Pricing = ({ data }) => {
-    console.log(data)
+const Pricing = ({ data }) => {    
     const [showDetail, updateShowDetail] = useState(false)
 
     const now = moment().utc()    

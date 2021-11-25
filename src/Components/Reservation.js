@@ -23,18 +23,9 @@ const Reservation = ({ campId, price }) => {
             })
     }
 
-    useEffect(fetchData, [])    
+    useEffect(fetchData, [])
     
-    if (window.location.origin === 'https://spolekdeti.cz') {
-        return(
-            <div className="reservation-container-outer">
-                    <div className="reservation-container-inner br-blue-2">
-                        <h2 className="c-blue tc">Online přihlašení se připravuje</h2>
-                    </div>
-                        
-            </div>
-            )
-    } else {
+    if (process.env.REACT_APP_ALLOW_REGISTRATION.trim() === 'true') {
         return (
             <div className="reservation-container-outer">
                 <div className="reservation-container-inner">
@@ -54,7 +45,15 @@ const Reservation = ({ campId, price }) => {
                 </div>
             </div>
         )
-        
+    } else {
+        return(
+            <div className="reservation-container-outer">
+                    <div className="reservation-container-inner br-blue-2">
+                        <h2 className="c-blue tc">Online přihlašení se připravuje</h2>
+                    </div>
+                        
+            </div>
+        )    
     }
 }
 

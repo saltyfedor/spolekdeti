@@ -3,6 +3,7 @@ import CampRegistrationContact from './CampRegistrationContact';
 import CampRegistrationParents from './CampRegistrationParents';
 import CampRegistrationChild from './CampRegistrationChild';
 import CampRegistrationConsent from './CampRegistrionConsent';
+import moment from 'moment';
 import apiAdress from '../Variables'
 import { useLocation, useHistory } from "react-router-dom";
 const CampRegistration = () => {
@@ -12,7 +13,7 @@ const CampRegistration = () => {
     const [currentSection, updateCurrentSection] = useState(0) 
     const [customerInfo, updateCustomerInfo] = useState({        
         other: ''
-    })    
+    })
 
     const putNewCustomer = (childInfo) => {        
         fetch(`${apiAdress}newcustomer`, {
@@ -21,6 +22,7 @@ const CampRegistration = () => {
             body: JSON.stringify(
                 {
                     campId: campId,
+                    added: moment.utc().format(),
                     capacity_id: capacity_id,
                     cname: customerInfo.full_name,
                     cbday: customerInfo.birthday,
