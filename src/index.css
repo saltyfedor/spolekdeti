@@ -337,7 +337,7 @@ p{
 }
 
 .reservation-container-outer{
-  padding: 20px;
+  padding: 20px 36px;
   display: flex;
   justify-content: center;
 }

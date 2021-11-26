@@ -29,6 +29,7 @@
 
 .checkbox-input{
     width: 25px;
+    min-width: 15px;
     margin: 15px 10px 10px 0px;
     border-color: #3590F3;
 }
