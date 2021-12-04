@@ -1,3 +1,19 @@
-.social-container{    
-    
+.social-feed-container{    
+ min-width: 300px;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: calc(-3%);
+ margin-bottom: calc(-3%);
+}
+
+.social-text-container{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin:  calc(3% + 20px) auto calc(3% + 20px) auto; 
+    max-width: 1120px;
+    padding: 0px 25px;  
+    min-height: 400px;
+    flex-wrap: wrap;
 }

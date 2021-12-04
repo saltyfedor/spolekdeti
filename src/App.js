@@ -12,6 +12,7 @@ import RegistrationError from './Components/RegistrationError';
 import DashboardContainer from './Components/Dashboard/DashboardContainer';
 import Team from './Components/Team/Team'
 import Voucher from './Components/Voucher/Voucher';
+import FacebookFeed from './Components/Social/FacebookFeed';
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,7 +28,7 @@ const App = () => {
           <Switch>
           <Route exact path="/">
             <Navbar />
-            <TitleSection />
+            <TitleSection />           
             <Camps/>           
             <Team/>
             <Locale />           
@@ -65,7 +66,7 @@ const App = () => {
             <Footer />
           </Route>         
           </Switch>      
-      </Router>
+      </Router>     
     </div>
   )
   
