@@ -31,14 +31,17 @@
 .name-cell{
     width: 200px;
     overflow-x: hidden;
+    height: min-content;
 }
 
 .email-cell{
     width: 250px;
+    height: min-content;
 }
 
 .customer-display-container{
     display: flex;
+    align-items: center;
 }
 
 .top-bar{
@@ -50,6 +53,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.customer-button-container{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.customer-detail-button{
+    padding: 10px;
+    border: 2px solid #3590F3;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.customer-detail-container{
+    border-top: 2px solid black;
+    padding: 10px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+} 
+.customer-detail-container > p {
+    margin: 0;
+}
+
+.customer-detail-label{
+    min-width: 200px;
+    display: inline-block;
 }
 
 .payment-checkbox{

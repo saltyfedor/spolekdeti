@@ -60,6 +60,9 @@ const App = () => {
           <Route path="/login">
              <DashboardContainer />
           </Route>
+          <Route path="/login/customer/:id">
+
+          </Route>
           <Route path="/voucher">
             <Navbar/>
             <Voucher />
