@@ -41,12 +41,7 @@ const CustomersEdit = ({ token }) => {
     
     useEffect(() => { fetchCustomers() }, [])
 
-    const getCustomers = () => {
-        /*const currentCustomerElements = customerData.map(customerObj => {
-            return (
-                <div key={customerObj.id}>{customerObj.full_name}</div>
-            )
-        })*/
+    const getCustomers = () => {       
 
         const currentCustomerElements = customerData.map(customerObj => {
             return <CustomerElement key={customerObj.id} data={customerObj} filters={filters} token={token}/>
@@ -67,8 +62,7 @@ const CustomersEdit = ({ token }) => {
         }
     }
     
-    const handlePaymentStatusChange = (value, type) => {
-        console.log('got value', value)
+    const handlePaymentStatusChange = (value, type) => {       
         const newFilters = Object.assign({}, filters, { [type]: value })
         updateFilters(newFilters)
     }
