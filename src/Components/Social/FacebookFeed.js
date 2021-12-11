@@ -1,7 +1,13 @@
-import React from "react";
+import React, {useEffect} from "react";
 import './Social.css'
 
-const FacebookFeed = () => {    
+const FacebookFeed = () => { 
+    
+    useEffect(() => {
+        if (window.FB) {
+            window.FB.XFBML.parse()
+        }
+    })
     
     return (
         <div className="social-feed-container">                       
