@@ -31,7 +31,7 @@ const App = () => {
             <TitleSection />           
             <Camps/>           
             <Team/>
-            <Locale />           
+            {/*<Locale /> */ }          
             <Footer />
           </Route>
           <Route path="/Camp/:id">
