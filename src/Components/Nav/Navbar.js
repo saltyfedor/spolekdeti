@@ -11,10 +11,7 @@ const Navbar = () => {
             <Link to={`/`} style={{ textDecoration: 'none' }}>
                 <img src={logo} alt='logo' className="logo-top"></img>
             </Link>            
-            <div className="navbar-links">
-                <Link to={`/voucher`} style={{ textDecoration: 'none' }}>
-                    <div href="#kontakt" className="nav-link christmas"><h4 style={{margin:0}}>KUP DÁREK</h4></div>
-                </Link>
+            <div className="navbar-links">                
                 <a href="kontakt" className="nav-link"><h4 style={{margin:0}}>KONTAKT</h4></a>
             </div>
         </div>

@@ -1,25 +1,10 @@
-.locale-galley-wrapper{    
-    margin-top: 25px;
-    padding: 0px 20px;
-    max-width: 1120px;
-    display: flex;
-    justify-content: space-evenly;
+.locale-heading{
+    text-align: left;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+    color: #3590F3;
 }
 
-.locale-galley-img{    
-    box-sizing: border-box;
-    max-width: 45%;
-    border: 3px solid #3590F3;
-    background-color: #3590F3;
-    box-sizing: border-box;
-    margin: 10px;
-    height: auto;    
+strong{
+    color: #3590F3;
 }
-
-.locale{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-

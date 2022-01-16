@@ -1,22 +1,32 @@
 import React from 'react'
-import LocaleGallery from './LocaleGallery'
-import pecka1 from '../../Images/pecka1.jpg'
-import pecka2 from '../../Images/pecka2.jpg'
-import pecka3 from '../../Images/pecka3.jpg'
-
+import '../../Images/locale.jpeg'
 import '../../index.css'
+import './LocaleGallery.css'
 
 const Locale = () => {
     return (
         <div id="lokal" className="locale-container">
             <div className="locale">                
-                <h1 className="home-page-title c-blue">REKREAČNÍ AREÁL PECKA</h1>
+                <h1 className="home-page-title c-blue">STŘEDISKO HRACHOV</h1>
                 <p className="locale-paragraph hmtext">
-                    Rekreační areál Pecka je oblíbeným areálem, který leží v nádherné a členité krajině nedaleko městečka Pecka, kterému dominuje zřícenina stejnojmenného hradu.
-                    Areál se rozprostírá na velmi prostorném pozemku a je obklopen bohatými lesy. 300 m od areálu se nachází velice pěkné koupaliště. Areál je vhodný pro rekreaci rodin s dětmi,
-                    ale je i vhodným cílem školních výletů, škol v přírodě, sportovních i prázdninových pobytů.
-                </p>                             
-                <LocaleGallery/>               
+                    Areál rekreačního střediska je umístěn v přírodě, na kraji lesa. Vzdálenost od vesnice je cca 1 km. U příjezdové cesty se nachází <strong>zděná budova a za ní 17 dřevěných chat, hřiště a sociální zařízení pro chaty.</strong> 
+                </p>
+                <h3 className="locale-heading hmtext">ZDĚNÁ BUDOVA</h3>
+                <p className="locale-paragraph hmtext">
+                Budova disponuje celkem 29ti čtyřlůžkovými pokoji pro děti (bez paland), pro paní učitelky nabízíme pět zrekonstruovaných dvoulůžkových pokojů s vlastním sociálním zařízením.  V hlavní budově se nachází jídelna s kapacitou 100 míst a čtyři učebny (klubovny).
+                </p>
+                <h3 className="locale-heading hmtext">CHATKY</h3>
+                <p className="locale-paragraph hmtext">
+                Ve středisku se nachází <strong>17 dřevěných chat (6 chat čtyřlůžkových a jedenáct chat osmilůžkových)</strong>. Chatky jsou vybaveny postelemi, skříněmi a dalšími úložnými prostory. Je zde zavedena elektřina a v případě potřeby jsou vytápěny radiátory. Sociální zařízení pro klienty ubytované ve chatkách se nachází vedle chat.
+                </p>
+                <h3 className="locale-heading hmtext">SPOLEČENSKÉ MÍSTNOSTI</h3>
+                <p className="locale-paragraph hmtext">
+                Ve středisku jsou k dispozici <strong>4 klubovny</strong>, které jsou vybaveny lavicemi, tabulemi na popisovače / křídy. Každá skupina tak může mít dostatek soukromí pro své aktivity. Pro hromadnější akce (diskotéky, promítání, školení, prezentace) doporučujeme využít velkou jídelnu.
+                </p>
+                <h3 className="locale-heading hmtext">VYBAVENÍ STŘEDISKA</h3>
+                <p className="locale-paragraph hmtext">Středisko nabízí široké možnosti sportovního vyžití pro děti i dospělé. K dispozici jsou <strong>2 udržovaná hřiště</strong>, stoly na stolní tenis či travnatá louka vhodná pro softbal, frisbee aj. Během jara a léta mohou klienti využít <strong>venkovní bazén se skluzavkou</strong>. Milovníci táboráků uvítají udržované <strong>ohniště</strong>. Okolní terén je vhodný pro cyklistiku.</p>
+                <h3 className="locale-heading hmtext">STRAVOVÁNÍ</h3>
+                <p className="locale-paragraph hmtext">Stravování probíhá přímo ve středisku v prostorné jídelně. V ceně jsou samozřejmě snídaně, oběd, večeře, svačiny a neustále přísun pitného režimu.</p>
             </div>
         </div>
     )
