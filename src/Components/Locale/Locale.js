@@ -13,18 +13,18 @@ const Locale = () => {
                 </p>
                 <h3 className="locale-heading hmtext">ZDĚNÁ BUDOVA</h3>
                 <p className="locale-paragraph hmtext">
-                Budova disponuje celkem 29ti čtyřlůžkovými pokoji pro děti (bez paland), pro paní učitelky nabízíme pět zrekonstruovaných dvoulůžkových pokojů s vlastním sociálním zařízením.  V hlavní budově se nachází jídelna s kapacitou 100 míst a čtyři učebny (klubovny).
+                Budova disponuje celkem 29 čtyřlůžkovými pokoji pro děti (bez paland). V hlavní budově se nachází jídelna s kapacitou 100 míst a čtyři učebny (klubovny).
                 </p>
                 <h3 className="locale-heading hmtext">CHATKY</h3>
                 <p className="locale-paragraph hmtext">
-                Ve středisku se nachází <strong>17 dřevěných chat (6 chat čtyřlůžkových a jedenáct chat osmilůžkových)</strong>. Chatky jsou vybaveny postelemi, skříněmi a dalšími úložnými prostory. Je zde zavedena elektřina a v případě potřeby jsou vytápěny radiátory. Sociální zařízení pro klienty ubytované ve chatkách se nachází vedle chat.
+                Ve středisku se nachází <strong>17 dřevěných chat (6 chat čtyřlůžkových a jedenáct chat osmilůžkových)</strong>.Chatky jsou vybaveny postelemi, skříněmi a dalšími úložnými prostory. Je zde zavedena elektřina a v případě potřeby jsou vytápěny radiátory. Sociální zařízení pro klienty ubytované ve chatkách se nachází vedle chat.
                 </p>
                 <h3 className="locale-heading hmtext">SPOLEČENSKÉ MÍSTNOSTI</h3>
                 <p className="locale-paragraph hmtext">
-                Ve středisku jsou k dispozici <strong>4 klubovny</strong>, které jsou vybaveny lavicemi, tabulemi na popisovače / křídy. Každá skupina tak může mít dostatek soukromí pro své aktivity. Pro hromadnější akce (diskotéky, promítání, školení, prezentace) doporučujeme využít velkou jídelnu.
+                Ve středisku jsou k dispozici <strong>4 klubovny</strong>, které jsou vybaveny lavicemi, tabulemi na popisovače / křídy. Každá skupina tak může mít dostatek soukromí pro své aktivity.
                 </p>
                 <h3 className="locale-heading hmtext">VYBAVENÍ STŘEDISKA</h3>
-                <p className="locale-paragraph hmtext">Středisko nabízí široké možnosti sportovního vyžití pro děti i dospělé. K dispozici jsou <strong>2 udržovaná hřiště</strong>, stoly na stolní tenis či travnatá louka vhodná pro softbal, frisbee aj. Během jara a léta mohou klienti využít <strong>venkovní bazén se skluzavkou</strong>. Milovníci táboráků uvítají udržované <strong>ohniště</strong>. Okolní terén je vhodný pro cyklistiku.</p>
+                <p className="locale-paragraph hmtext">Středisko nabízí široké možnosti sportovního vyžití pro děti i dospělé. K dispozici jsou <strong>2 udržovaná hřiště</strong>, stoly na stolní tenis či travnatá louka vhodná pro softbal, frisbee aj. Areál disponuje i velikým bazeném se skluzavkou. Milovníci táboráků uvítají udržované <strong>ohniště</strong>.</p>
                 <h3 className="locale-heading hmtext">STRAVOVÁNÍ</h3>
                 <p className="locale-paragraph hmtext">Stravování probíhá přímo ve středisku v prostorné jídelně. V ceně jsou samozřejmě snídaně, oběd, večeře, svačiny a neustále přísun pitného režimu.</p>
             </div>
