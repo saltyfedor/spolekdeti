@@ -114,6 +114,7 @@
 .member-name{
     margin-top: 10px;
     margin-bottom: 0;
+    white-space: nowrap;
 }
 
 .member-role{
