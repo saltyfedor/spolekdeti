@@ -30,9 +30,15 @@ const Pricing = ({ data }) => {
             if (float.default) return `Do ${moment(float.end).format('DD.MM.YYYY')}`
             else return `Od ${moment(float.start).format('DD.MM.YYYY')} do ${moment(float.end).format('DD.MM.YYYY')}`
         }
-        const floatArr = pricePeriods.map(priceFloat => {
-            return(<h4 key={priceFloat.start} className="pricing-detail-text">{`${getText(priceFloat)} : ${priceFloat.price} Kč`}</h4>)
-        })       
+
+        const floatArr = [];
+        const now = moment().utc().format()
+        pricePeriods.forEach(priceFloat => {            
+            if (now <= priceFloat.start) {
+                floatArr.push(<h4 key={priceFloat.start} className="pricing-detail-text">{`${getText(priceFloat)} : ${priceFloat.price} Kč`}</h4>)
+            }
+        })
+        
         return floatArr
     }
     

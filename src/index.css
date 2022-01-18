@@ -520,6 +520,14 @@ p{
   flex-basis: 10px;
 }
 
+.text-black{
+  color: black !important;
+}
+
+.text-black > p > strong {
+  color: black;
+}
+
 .br-blue-2{
   border: solid #3590F3 2px;
 }
