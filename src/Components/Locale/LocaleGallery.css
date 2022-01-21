@@ -1,8 +1,56 @@
+
+.locale-container{
+    background-color: white;
+    padding-top: calc(3% + 20px);   
+    padding-bottom: 30px;
+    padding-left: 25px;
+    padding-right: 25px;    
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+.locale-paragraph{
+    text-align: left;
+    line-height: 2;
+}
+
+.locale{
+    max-width: 1140px;
+}
+
 .locale-heading{
     text-align: left;
     margin-top: 15px !important;
     margin-bottom: 15px !important;
     color: #3590F3;
+}
+
+.locale-image{    
+    border-radius: 10px;
+    min-width: 80px;
+    min-height: 80px;    
+    width: 33%;    
+}
+
+.locale-gallery{       
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;      
+    box-sizing: border-box;   
+    max-width: 100%; 
+}
+
+@media(max-width: 500px){
+    .locale-gallery{
+        flex-direction: column;
+    }
+    .locale-image{
+        width: 100%;
+    }
 }
 
 strong{
