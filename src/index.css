@@ -29,10 +29,25 @@ p{
   font-size: 16px;
 }
 
-
-
 .logo-top{
   max-height: 80px;
+}
+
+.hero-image{
+  box-sizing: border-box;
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  max-height: 85vh;  
+  overflow: hidden;  
+}
+
+@media(max-width: 600px){
+  .hero-image{
+    object-fit: cover;   
+    object-position: top;
+    
+  }
 }
 
 .navbar-container{
@@ -70,9 +85,13 @@ p{
 }
 
 .title-image-container{
-  height: 70vh;
-  background-size: cover;
-  background-position: 50% 40%;
+  box-sizing: border-box;
+  width: 100%;
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  min-height: 60vh;  
+  
 }
 
 .hero-title-container{
@@ -587,6 +606,7 @@ textarea{
 .mt0{
   margin-top: 0;
 }
+
 
 @media(max-width: 660px){
   .meznik{

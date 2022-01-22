@@ -1,24 +1,20 @@
 import React from 'react'
-import heroImage from '../Images/hero-image.jpg'
+import heroImage from '../Images/hero/hero_small.jpg'
+import heroFullsize from '../Images/hero/hero.jpg'
+
 import FacebookFeed from './Social/FacebookFeed'
+import useCheckMobile from './useCheckMobile'
 import './Social/Social.css'
 
 const TitleSection = () => {
-    
+    const mobile = useCheckMobile()
     return (
        
-        <div className="title-section">
+        <div className="title-section">            
             
-            <div className="title-image-container" style={{
-                backgroundImage: `url(${heroImage})`
-            }}>               
-                    <div className="hero-title-container">
-                        
-                    </div>               
-            </div>   
-               
-                <div className="social-text-container">
-                    
+            {!mobile? <img src={heroFullsize} className='hero-image' alt="hero" /> :
+            <img src={heroImage} className='hero-image' alt="hero" />}
+                <div className="social-text-container">                    
                     <div className="hero-paragraph">
                     <h1 className="home-page-title c-blue mb0">O NÁS</h1>
                         <p id="tabory">
@@ -38,3 +34,9 @@ const TitleSection = () => {
  }
 
 export default TitleSection
+
+/*
+<div className="title-image-container" style={{
+                backgroundImage: `url(${heroImage})`
+            }}>
+*/
