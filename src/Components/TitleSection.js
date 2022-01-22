@@ -1,7 +1,6 @@
 import React from 'react'
 import heroImage from '../Images/hero/hero_small.jpg'
 import heroFullsize from '../Images/hero/hero.jpg'
-
 import FacebookFeed from './Social/FacebookFeed'
 import useCheckMobile from './useCheckMobile'
 import './Social/Social.css'
