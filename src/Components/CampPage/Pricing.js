@@ -34,7 +34,7 @@ const Pricing = ({ data }) => {
         const floatArr = [];
         const now = moment().utc().format()
         pricePeriods.forEach(priceFloat => {            
-            if (now <= priceFloat.start) {
+            if (now <= priceFloat.end) {
                 floatArr.push(<h4 key={priceFloat.start} className="pricing-detail-text">{`${getText(priceFloat)} : ${priceFloat.price} Kč`}</h4>)
             }
         })
