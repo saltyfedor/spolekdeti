@@ -42,7 +42,7 @@ const Contact = () => {
             <h1 className="home-page-title mtres">KONTAKTUJTE NÁS</h1>
             <div className="contact-card">
                 <h3>Telefon: +420 608 159 466</h3>
-                <h3>Email: spolekdeti@seznam.cz</h3>
+                <h3>Email: michal.sefrna@spolekdeti.cz</h3>
                 <h3>Sídlo společnosti: Praha 10 - Korunní 2569/108 PSČ: 10100</h3>
                 <h3>IČO: 11931451</h3>
                 <h3>Bankovní spojení: 5949212002/5500</h3>
