@@ -112,6 +112,18 @@ const Team = () => {
         return starList
     }
 
+    const getGuestCards = () => {
+        const guestList = []
+        teamData.forEach((memberObj, i) => {           
+            if (memberObj.role === 'host') {                
+                guestList.push(
+                    <TeamCard key={i} data={memberObj}/>
+                )
+            }
+        })
+        return guestList
+    }
+
     return (
         <div className="team-container">
             <h1 className="home-page-title">NAŠI VEDOUCÍ</h1>
@@ -134,7 +146,12 @@ const Team = () => {
                 <div className="team-display mt20">
                     {getSuperStarCards()}
                 </div> 
-                : <div className="team-display-loading"><Loader /></div>}            
+                : <div className="team-display-loading"><Loader /></div>}
+            <h1 className="home-page-title mtres">HOSTÉ</h1>
+            {teamData ?
+                <div className="team-display mt20">
+                    {getGuestCards()}
+                </div> : <div className="team-display-loading"><Loader /></div>}
         </div>
     )
 }

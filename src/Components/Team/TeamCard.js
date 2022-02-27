@@ -65,7 +65,7 @@ const TeamCard = ({ data }) => {
                     
                         <h2 className=" member-name tc c-blue mt25">{data.name}</h2>
                         <h3 className="member-role tc">{getRole()}</h3>
-                        {data.additional === "influencer" ? getSocial() : null}
+                        {data.additional === "influencer" || data.role === "host"? getSocial() : null}
                 </div> 
                 <div className={`team-button tc mt20`} onClick={handleButtonClick}>O MNĚ</div>
             </div>    
@@ -78,10 +78,10 @@ const TeamCard = ({ data }) => {
                     <div className="open-container team-flex-col">
                             <div>
                             <h2 className=" member-name tc c-blue mt0">{data.name}</h2>
-                            <p className="team-card-text m0 tc bt-blue">{data.description}</p>
+                        <p className={data.additional === "influencer" || data.role === "host"? "team-card-text m0 tc bt-blue team-text-social" : "team-card-text m0 tc bt-blue team-text-no-social"}>{data.description}</p>
                             </div>
                             <div className="team-button tc mt20" onClick={handleButtonClick}>{getButtonText()}</div>
-                        </div>
+                    </div>
             </CSSTransition>
             
         </div>

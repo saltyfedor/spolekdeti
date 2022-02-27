@@ -82,6 +82,16 @@
 
 .team-card-text{
     margin-top: 5px;
+    
+    overflow-x: auto;
+}
+
+.team-text-no-social{
+    max-height: 245px;
+}
+
+.team-text-social{
+    max-height: 305px;
 }
 
 .open-container{
