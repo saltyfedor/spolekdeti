@@ -104,6 +104,7 @@
 
 .member-image{
     max-width: 215px;
+    min-height: 215px;
     width: 100%;      
     border: transparent;
     border-radius: 50%;

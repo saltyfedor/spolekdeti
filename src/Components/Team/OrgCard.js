@@ -6,7 +6,7 @@ import apiAdress from '../Variables'
 const OrgCard = ({ data }) => {
     const [showLongDesc, updateShowLong] = useState(false)    
     
-    const backgroundImage = `${apiAdress}images/team/squared/${data.link}`
+    const backgroundImage = data.google_image ? data.google_image : `${apiAdress}images/team/squared/${data.link}`    
     
     const getDescription = () => {
         if (data.description_long && data.description_short) {
