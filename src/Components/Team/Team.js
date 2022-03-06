@@ -57,7 +57,7 @@ const Team = () => {
         const newCardListDes = []
         const newCardListNoDes = []
         teamData.forEach((memberObj, i) => {
-            if (checkCardPreviewList(memberObj) && memberObj.link && memberObj.role !== "superstar crew" && memberObj.role !== 'host') {
+            if (checkCardPreviewList(memberObj) && memberObj.role !== "superstar crew" && memberObj.role !== 'host') {
                 if (memberObj.description) {
                     newCardListDes.push(<TeamCard key={i} data={memberObj} />)
                 } else {
