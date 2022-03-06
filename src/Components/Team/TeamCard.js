@@ -8,7 +8,9 @@ import apiAdress from '../Variables'
 const TeamCard = ({ data }) => {   
     const [showDesc, updateShowDesc] = useState(false)     
     
-    const backgroundImage = `${apiAdress}images/team/squared/${data.link}`
+    const backgroundImage = data.google_image ? data.google_image : `${apiAdress}images/team/squared/${data.link}`
+        
+        
     
     const getRole = () => {
         if (data.additional === "influencer") return `${data.role} / ${data.additional}`
