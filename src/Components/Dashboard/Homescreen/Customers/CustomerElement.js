@@ -3,7 +3,8 @@ import { useSelector } from "react-redux";
 import moment from "moment";
 import apiAdress from "../../../Variables";
 
-const CustomerElement = ({ data, filters }) => {
+const CustomerElement = ({ data, filters}) => {
+    const linkRef = React.createRef();
     const token = useSelector(state => state.dash.token)
     const [displayDetail, updateDisplayDetail] = useState(false)
     
@@ -22,7 +23,24 @@ const CustomerElement = ({ data, filters }) => {
         }
     }
 
+    const getCustomerDoc = async () => {
+        const res = await fetch('http://localhost:3001/customer/document', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'x-access-token': token },
+            body: JSON.stringify(data)
+        })
 
+        if (res.ok) {
+            const blob = await res.blob()        
+            const href = window.URL.createObjectURL(blob);
+            const a = linkRef.current;
+            a.download = `${data.full_name}_prihlaska.docx`;
+            a.href = href;
+            a.click();
+            a.href = '';
+        }
+        
+    }
 
     const handlePaymentChange = async (type, value) => {
         const response = await fetch(`${apiAdress}customer/payment/status`, {
@@ -43,6 +61,7 @@ const CustomerElement = ({ data, filters }) => {
                 <div className="customer-display-container">
                     <p className="name-cell mv10">{data.full_name}</p>
                     <p className="email-cell mv10">{data.parent_email}</p>
+                    <p className="birthnum-cell mv10">{data.birth_number}</p>
                     <div className="payment-cell mv10">
                         <input className="payment-checkbox" type="checkbox" defaultChecked={data.paid_base} onChange={(e) => handlePaymentChange('paid_base', e.target.checked)}></input>
                     </div>
@@ -50,6 +69,7 @@ const CustomerElement = ({ data, filters }) => {
                         <input className="payment-checkbox" type="checkbox" defaultChecked={data.paid_full} onChange={(e) => handlePaymentChange('paid_full', e.target.checked)}></input>
                     </div>
                     <div className="customer-button-container">
+                    <button className="customer-detail-button mr10" onClick={getCustomerDoc}>Přihláška</button>
                         <button className="customer-detail-button" onClick={() => updateDisplayDetail(!displayDetail)}>Detail</button>
                     </div>
                 </div>
@@ -63,7 +83,8 @@ const CustomerElement = ({ data, filters }) => {
                         <p><span className="customer-detail-label">Jméno otce:</span>{data.father_fullname}</p>
                         <p><span className="customer-detail-label">Telefon otce:</span>{data.father_phone}</p>
                     </div>
-                    : null}
+                    : null}                
+                <a ref={linkRef}/>
              </div>
             
         )

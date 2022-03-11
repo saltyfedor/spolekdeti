@@ -75,6 +75,7 @@ const CustomersEdit = ({ token }) => {
                     <div className="top-bar">
                         <h4 className="name-cell mv10">Jméno</h4>
                         <h4 className="email-cell mv10">Email</h4>
+                        <h4 className="birthnum-cell mv10">Rodné číslo</h4>
                         <h4 className="payment-cell mv10">Záloha</h4>
                         <h4 className="payment-cell mv10">Doplatek</h4>
                     </div>

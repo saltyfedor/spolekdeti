@@ -39,6 +39,11 @@
     height: min-content;
 }
 
+.birthnum-cell{
+    width: 100px;
+    height: min-content;
+}
+
 .customer-display-container{
     display: flex;
     align-items: center;
@@ -96,4 +101,9 @@
     appearance: none;
 } :checked{
     background-color: #3590F3;
+}
+
+
+.mr10{
+    margin-right: 10px;
 }
