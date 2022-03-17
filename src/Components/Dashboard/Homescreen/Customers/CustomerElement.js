@@ -24,7 +24,7 @@ const CustomerElement = ({ data, filters}) => {
     }
 
     const getCustomerDoc = async () => {
-        const res = await fetch(`${apiAdress}customer/document`, {
+        const res = await fetch(`${/*apiAdress*/'http://localhost:3001/'}customer/document`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'x-access-token': token },
             body: JSON.stringify(data)
