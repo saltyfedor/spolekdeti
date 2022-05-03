@@ -1,10 +1,13 @@
 import React, { useState, useLayoutEffect } from "react";
 import PriceList from "./PriceList";
+import './Edit.css'
 import apiAdress from "../../../Variables";
 
 const CampEditPopup = ({ data, token, update, onClose }) => {
     const [camp, updateCamp] = useState(data)
-    let pricing = [...camp.pricing.floating]   
+    let pricing = [...camp.pricing.floating] 
+    let discount = camp.pricing.discount
+    let discountPrice = camp.pricing.discount_price
 
     useLayoutEffect(() => {
         // Get original body overflow
@@ -40,7 +43,9 @@ const CampEditPopup = ({ data, token, update, onClose }) => {
                 body: JSON.stringify({
                     camp_id: campId,
                     base: base,
-                    floating: floating
+                    floating: floating,
+                    discount: Boolean(discount),
+                    discount_price: discountPrice
                 })
             })
             if (res.ok) {
@@ -51,6 +56,10 @@ const CampEditPopup = ({ data, token, update, onClose }) => {
         }
        
         
+    }
+
+    const handleDiscountChange = (e) => {
+        discount = e.target.value
     }
 
     return (
@@ -71,7 +80,16 @@ const CampEditPopup = ({ data, token, update, onClose }) => {
                             }
                             }} /> Kč</span>
                             {pricing ? <PriceList data={pricing} onChange={handlePricingChange} /> : null}
-                        </div>
+                            
+                            <div className="discount-input-container">
+                            <h4 className="price-float-input-label">Sleva :</h4>
+                                <select defaultValue={discount} onChange={handleDiscountChange}>
+                                    <option value={false}>Ne</option>
+                                    <option value={true}>Ano</option>
+                                </select>
+                                <input className="price-float-input-price" type="number" maxLength="5" defaultValue={discountPrice} onChange={(e) => { discountPrice = e.target.value }} />
+                            </div>
+                        </div>                        
                     </div>
                 </div>
                 <div className="admin-save-button" onClick={()=> handleDataSubmit()}>ULOŽIT</div>

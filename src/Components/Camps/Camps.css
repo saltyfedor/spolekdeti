@@ -42,7 +42,7 @@
 .camp-card-links{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 
@@ -82,4 +82,18 @@
     opacity: 0;
     transform: scale(0.9);
     transition: opacity 300ms, transform 300ms;
+}
+
+.price-crossed{
+    text-decoration: line-through; 
+     
+}
+
+.price-discount{
+    color: #B33F40;  
+}
+
+.discount-container{
+    display: flex;
+    flex-direction: column-reverse;
 }

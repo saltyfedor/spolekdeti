@@ -60,13 +60,22 @@ const Pricing = ({ data }) => {
     const handleDetailClick = () => {
         updateShowDetail(true)
     }
+
+    const getPrice = () => {
+        console.log(data)
+        if (data[0].discount) {
+
+            console.log(data.discount_price)
+            return <h2 className="tc c-green mb0 pricing-text mt0">Aktuálně nabízíme tábor za cenu {data[0].discount_price} Kč*</h2>
+        } else return <h2 className="tc c-green mb0 pricing-text mt0">{`Aktuálně nabízíme tábor za cenu ${parseInt(data[0].base) + currentPrice.price} Kč*`}</h2>
+    }
     
     
     return (
         <div className="pricing-wrapper">
         <div className="pricing-container">
             
-            <h2 className="tc c-green mb0 pricing-text mt0">{`Aktuálně nabízíme tábor za zvýhodněnou cenu ${parseInt(data[0].base) + currentPrice.price} Kč*`}</h2>
+            {getPrice()}
             <h4 className="tc c-green mt0 mb0 pricing-text">{`*Nabídka platí do ${moment(currentPrice.end).format('DD.MM.YYYY')}, konečná cena se odvíjí od data platby, `}<span onClick={handleDetailClick} className="pricing-link">podrobnějí</span></h4>
            
             <CSSTransition

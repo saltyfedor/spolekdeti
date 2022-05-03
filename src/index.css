@@ -116,6 +116,15 @@ p{
   text-align: left;
 }
 
+.sale-text{
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  background-color: #3590F3;
+  color: white;
+  margin-top: -5px;
+}
+
 .home-page-title{
   margin: 0px 25px 25px 25px;
   text-align: center;
