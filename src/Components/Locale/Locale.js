@@ -27,7 +27,11 @@ const Locale = () => {
                 <p className="locale-paragraph">Středisko nabízí široké možnosti sportovního vyžití pro děti i dospělé. K dispozici jsou <strong>2 udržovaná hřiště</strong>, stoly na stolní tenis či travnatá louka vhodná pro softbal, frisbee aj. Areál disponuje i velikým bazeném se skluzavkou. Milovníci táboráků uvítají udržované <strong>ohniště</strong>.</p>
                 <h3 className="locale-heading">STRAVOVÁNÍ</h3>
                 <p className="locale-paragraph">Stravování probíhá přímo ve středisku v prostorné jídelně. V ceně jsou samozřejmě snídaně, oběd, večeře, svačiny a neustále přísun pitného režimu.</p>
-                <LocaleGallery/>
+                <h3 className="locale-heading">ADRESA PRO DORUČOVÁNÍ KORESPONDENCE</h3>
+                <p className='locale-paragraph'>
+                RS Kymevo Hrachov<br/>Svatý Jan – Hrachov<br/>26256, pošta Dražkov
+                </p>
+                <LocaleGallery />
             </div>            
         </div>
     )

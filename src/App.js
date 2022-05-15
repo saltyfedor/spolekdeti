@@ -12,6 +12,7 @@ import RegistrationError from './Components/RegistrationError';
 import DashboardContainer from './Components/Dashboard/DashboardContainer';
 import Team from './Components/Team/Team'
 import Voucher from './Components/Voucher/Voucher';
+import Transit from './Components/Transit/Transit';
 import {
   BrowserRouter as Router,
   Switch,
@@ -30,7 +31,8 @@ const App = () => {
             <TitleSection />           
             <Camps/>           
             <Team/>
-            <Locale />         
+            <Locale />   
+            <Transit />
             <Footer />
           </Route>
           <Route path="/Camp/:id">

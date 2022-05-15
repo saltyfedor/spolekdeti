@@ -2,7 +2,7 @@
 .locale-container{
     background-color: white;
     padding-top: calc(3% + 20px);   
-    padding-bottom: 30px;
+    padding-bottom: calc(3% + 20px) !important;
     padding-left: 25px;
     padding-right: 25px;    
     overflow: auto;

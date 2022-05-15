@@ -48,7 +48,10 @@ const CampPage = () => {
                     </div>
                         : null}
                 </div>
-                <Pricing data={currentCamp.pricing}/>
+                <Pricing data={currentCamp.pricing} />
+                <div className='email-warning'>
+                    <h3>PO PŘIHLÁŠENÍ PROSÍM KONTROLUJTE SLOŽKU HROMADNÉ A SPAM</h3>
+                </div>
                 <Reservation campId={id} price={currentCamp.price}/>
                 
                

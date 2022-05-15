@@ -36,7 +36,6 @@ const CampCard = ({ data }) => {
     
     const getPrice = () => {
         if (data?.pricing) {             
-            console.log(findCurrent())
 
             const price = parseInt(data.pricing.base) + parseInt(findCurrent())
             //return price

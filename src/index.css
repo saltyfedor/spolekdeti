@@ -551,6 +551,23 @@ p{
   display: flex;  
 }
 
+.email-warning{
+  max-width: 1120px;
+  border-radius: 10px;
+  margin: 20px 0px 0px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: orange;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.email-warning > h3 {
+  margin: 0;
+}
+
 .text-black{
   color: black !important;
 }
@@ -583,7 +600,19 @@ p{
   margin-top: 0px;
 }
 
+.mh-auto{
+  margin: 0 auto;
+}
 
+.transit-heading{
+  margin: 15px 0px;
+}
+
+.transit{
+  padding-bottom: calc(3% + 20px) !important;
+  padding-left: 25px;
+  padding-right: 25px;
+}
 
 input{
   height: 20px;
