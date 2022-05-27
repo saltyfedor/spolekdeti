@@ -10,9 +10,25 @@ const CampCard = ({ data }) => {
     const imageLink = `${apiAdress}images/camps/preview/${data.preview_link}`
 
     const findEarliest = () => {
+        
         let first = data.pricing.floating[0]
         data.pricing.floating.forEach(element => {
-            if (element.start < first.start) first = element
+            if (element.start < first.start) {
+                console.log(element)
+                first = element
+            }
+                
+        });
+        return first.price
+    }
+
+    const findMax = () => {
+        let first = data.pricing.floating[0]
+        data.pricing.floating.forEach(element => {
+            if (element.start > first.start) {
+                console.log(element)
+                first = element
+            }
                 
         });
         return first.price
@@ -40,10 +56,13 @@ const CampCard = ({ data }) => {
             const price = parseInt(data.pricing.base) + parseInt(findCurrent())
             //return price
             if (data.pricing.discount) {
+                const maxPrice = parseInt(data.pricing.base) + parseInt(findMax())
+               
+
                 return (
                     <div className='discount-container'>
                         <h3 className='m0 price-discount'>{data.pricing.discount_price} Kč</h3>
-                        <h5 className='m0 price-crossed'>{price} Kč</h5>                        
+                        <h5 className='m0 price-crossed'>{maxPrice} Kč</h5>                        
                     </div>
                 )
             }
