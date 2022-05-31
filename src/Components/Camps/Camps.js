@@ -13,10 +13,15 @@ const Camps = ({voucher}) => {
     const mobile = useCheckMobileScreen()    
 
     const fetchCamps = async () => {
-        const res = await fetch(`${apiAdress}camps`, {
+        const data = await fetch(`${apiAdress}camps`, {
           method: 'GET',     
-        }).then(res => res.json())        
-        updateData(res)          
+        })    
+        
+        const res = await data.json()
+
+        const filtered = res.filter(camp => !camp.deleted)
+
+        updateData(filtered)          
     }
     
     useEffect(() => { fetchCamps() }, [])

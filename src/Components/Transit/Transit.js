@@ -8,7 +8,6 @@ const Transit = () => {
             <ul>
                 <li className="locale-paragraph">Hlavní stanoviště odjezdu je <b>Praha Černý most parkoviště HORNBACH v 10:30 hodin. (Chlumecká 2398, 19300 Praha 20 - Horní Počernice)</b></li>
                 <li className="locale-paragraph">Další zastávka je <b>Hradec králové</b> parkoviště <b>OBI v 11:00 hodin. (Akademika Bedrny 532/10 b, 50003 Hradec Králové – Věkoše)</b></li>
-                <li className="locale-paragraph">Další zastávka je <b>Ostrava</b> parkoviště <b>OC FUTURUM v 11:00 hodin. Novinářská 3178/6 a, 70200 Ostrava – Moravská</b></li>
                 <li className="locale-paragraph">Další zastávky se postupně budou přidávat podle počtu dětí a jejich bydliště.</li>
                 <li className="locale-paragraph">Platí pro všechny turnusy.</li>
             </ul>

@@ -14,7 +14,7 @@ const CampCard = ({ data }) => {
         let first = data.pricing.floating[0]
         data.pricing.floating.forEach(element => {
             if (element.start < first.start) {
-                console.log(element)
+                
                 first = element
             }
                 
@@ -26,7 +26,7 @@ const CampCard = ({ data }) => {
         let first = data.pricing.floating[0]
         data.pricing.floating.forEach(element => {
             if (element.start > first.start) {
-                console.log(element)
+                
                 first = element
             }
                 
