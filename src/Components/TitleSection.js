@@ -13,7 +13,7 @@ const TitleSection = () => {
             
             {!mobile? <img src={heroFullsize} className='hero-image' alt="hero" /> :
             <img src={heroImage} className='hero-image' alt="hero" />}
-            <h2 className='sale-text'>Aktuálně nabizíme slevu 20% na všechny tábory</h2>
+            <h2 className='sale-text'>Aktuálně nabizíme slevu 15% na všechny tábory</h2>
                 <div className="social-text-container">                    
                     <div className="hero-paragraph">
                     <h1 className="home-page-title c-blue mb0">O NÁS</h1>
