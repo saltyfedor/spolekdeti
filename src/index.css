@@ -548,7 +548,9 @@ p{
 }
 
 .footer-partner-container{
-  display: flex;  
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;  
 }
 
 .email-warning{
